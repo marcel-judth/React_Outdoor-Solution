@@ -12,10 +12,15 @@ body{
 }
 a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 p{
     font-size: 1.5rem;
+}
+@media (max-width: 1000px){
+    p{
+        font-size: 1rem;
+    }
 }
 `;
 

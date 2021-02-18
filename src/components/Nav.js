@@ -19,7 +19,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/' ? '60%' : '0%' }}
+            animate={{ width: location.pathname === '/' ? '50%' : '0%' }}
           />
         </li>
         <li>
@@ -27,7 +27,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/offers' ? '60%' : '0%' }}
+            animate={{ width: location.pathname === '/offers' ? '50%' : '0%' }}
           />
         </li>
         <li>
@@ -36,7 +36,7 @@ const Nav = () => {
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{
-              width: location.pathname === '/overview' ? '60%' : '0%',
+              width: location.pathname === '/overview' ? '50%' : '0%',
             }}
           />
         </li>
@@ -46,7 +46,7 @@ const Nav = () => {
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{
-              width: location.pathname === '/projects' ? '60%' : '0%',
+              width: location.pathname === '/projects' ? '50%' : '0%',
             }}
           />
         </li>
@@ -55,7 +55,7 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/contact' ? '60%' : '0%' }}
+            animate={{ width: location.pathname === '/contact' ? '50%' : '0%' }}
           />
         </li>
       </ul>
@@ -68,7 +68,7 @@ const StyledNav = styled.nav`
   width: 100vw;
   display: flex;
   position: fixed;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.66);
   top: 0;
   display: flex;
   align-items: center;
@@ -77,6 +77,7 @@ const StyledNav = styled.nav`
   z-index: 10;
   img {
     height: 5vh;
+    cursor: pointer;
   }
   ul {
     display: flex;
@@ -88,6 +89,7 @@ const StyledNav = styled.nav`
   }
   a {
     color: white;
+    font-weight: 200;
   }
 `;
 
@@ -96,8 +98,8 @@ const Line = styled(motion.div)`
   background: #00652f;
   width: 0%;
   position: absolute;
-  bottom: -60%;
-  left: 50%;
+  bottom: -80%;
+  left: 55%;
   @media (max-width: 1300px) {
     left: 0%;
   }

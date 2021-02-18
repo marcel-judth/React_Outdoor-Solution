@@ -1,7 +1,11 @@
 export const flyInAnim = {
-  hidden: { x: '-200%' },
+  x: 100,
+};
+
+export const titleAnim = {
+  hidden: { y: 200 },
   show: {
-    x: '0%',
+    y: 0,
     transition: { duration: 0.75, ease: 'easeOut' },
   },
 };
