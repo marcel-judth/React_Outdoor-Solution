@@ -66,6 +66,7 @@ const Nav = () => {
 const StyledNav = styled.nav`
   min-height: 10vh;
   width: 100vw;
+  max-width: 100vw;
   display: flex;
   position: fixed;
   background: rgba(0, 0, 0, 0.66);
@@ -89,13 +90,13 @@ const StyledNav = styled.nav`
   }
   a {
     color: white;
-    font-weight: 200;
+    font-weight: 300;
   }
 `;
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  background: #00652f;
+  background: ${Colors.primaryColor};
   width: 0%;
   position: absolute;
   bottom: -80%;
