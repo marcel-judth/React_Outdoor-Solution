@@ -33,10 +33,7 @@ const ServicesSection = () => {
         <div className="services">
           <AnimateSharedLayout>
             <ToggleContainer>
-              <Toggle
-                title="Planung von Gärten"
-                iconName="fas fa-ruler-combined"
-              >
+              <Toggle title="Planung von Gärten" iconName="fas fa-pencil-ruler">
                 <div className="answer">
                   <p>Lorem ipsum dolor sit amet.</p>
                   <p>
@@ -72,7 +69,7 @@ const ServicesSection = () => {
             </ToggleContainer>
 
             <ToggleContainer>
-              <Toggle title="Gartenpflege" icon="fas fa-seedling">
+              <Toggle title="Gartenpflege" iconName="fas fa-seedling">
                 <div className="answer">
                   <p>Lorem ipsum dolor sit amet.</p>
                   <p>
@@ -84,7 +81,7 @@ const ServicesSection = () => {
             </ToggleContainer>
 
             <ToggleContainer>
-              <Toggle title="Baumschnitt" icon={GiFruitTree}>
+              <Toggle title="Baumschnitt" iconName="fas fa-seedling">
                 <div className="answer">
                   <p>Lorem ipsum dolor sit amet.</p>
                   <p>

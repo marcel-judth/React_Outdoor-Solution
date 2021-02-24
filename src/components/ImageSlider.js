@@ -47,9 +47,9 @@ const ImageSliderSection = styled.div`
   }
   .right-arrow {
     position: absolute;
-    top: 50%;
-    right: 0%;
-    font-size: 3rem;
+    top: 40%;
+    right: -5%;
+    font-size: 7rem;
     cursor: pointer;
     user-select: none;
     z-index: 10;
@@ -58,9 +58,9 @@ const ImageSliderSection = styled.div`
 
   .left-arrow {
     position: absolute;
-    top: 50%;
-    left: 0%;
-    font-size: 3rem;
+    top: 40%;
+    left: -5%;
+    font-size: 7rem;
     cursor: pointer;
     user-select: none;
     z-index: 10;
