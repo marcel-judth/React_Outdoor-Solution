@@ -15,6 +15,11 @@ export const lineAnim = {
   show: { width: '95%', transition: { duration: 1 } },
 };
 
+export const lineAnimAboutUs = {
+  hidden: { width: '0%' },
+  show: { width: '100%', transition: { delay: 1, duration: 1 } },
+};
+
 export const fade = {
   hidden: { opacity: 0 },
   show: {

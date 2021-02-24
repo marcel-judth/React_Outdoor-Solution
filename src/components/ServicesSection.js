@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
 import ImageSlider from './ImageSlider';
+import { GiFruitTree, GiSeedling, GiPencilRuler } from 'react-icons/gi';
+import { FaSeedling, FaWater } from 'react-icons/fa';
 import { SliderData } from './SliderData';
 import { motion } from 'framer-motion';
 import { fade, lineAnim } from '../Animation';
@@ -70,7 +72,7 @@ const ServicesSection = () => {
             </ToggleContainer>
 
             <ToggleContainer>
-              <Toggle title="Gartenpflege" iconName="fas fa-seedling">
+              <Toggle title="Gartenpflege" icon="fas fa-seedling">
                 <div className="answer">
                   <p>Lorem ipsum dolor sit amet.</p>
                   <p>
@@ -82,7 +84,7 @@ const ServicesSection = () => {
             </ToggleContainer>
 
             <ToggleContainer>
-              <Toggle title="Baumschnitt" iconName="fas fa-cut">
+              <Toggle title="Baumschnitt" icon={GiFruitTree}>
                 <div className="answer">
                   <p>Lorem ipsum dolor sit amet.</p>
                   <p>

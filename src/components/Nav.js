@@ -27,24 +27,23 @@ const Nav = () => {
         <span className="line3"></span>
       </Burger>
 
-      {/* <FaBars className="burger" onClick={() => setNavStatus(!navStatus)} />
-      <FaTimes className="burger" onClick={() => setNavStatus(!navStatus)} /> */}
-
       <ul className={`${navStatus ? 'active' : ''}`}>
         <li>
           <Link to="/">Home</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/' ? '50%' : '0%' }}
+            animate={{ width: location.pathname === '/' ? '100%' : '0%' }}
           />
         </li>
         <li>
-          <Link to="/offers">Leistungen</Link>
+          <Link to="/aboutus">Über uns</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/offers' ? '50%' : '0%' }}
+            animate={{
+              width: location.pathname === '/aboutus' ? '100%' : '0%',
+            }}
           />
         </li>
         <li>
@@ -53,7 +52,7 @@ const Nav = () => {
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{
-              width: location.pathname === '/overview' ? '50%' : '0%',
+              width: location.pathname === '/overview' ? '100%' : '0%',
             }}
           />
         </li>
@@ -63,7 +62,7 @@ const Nav = () => {
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{
-              width: location.pathname === '/projects' ? '50%' : '0%',
+              width: location.pathname === '/projects' ? '100%' : '0%',
             }}
           />
         </li>
@@ -72,7 +71,9 @@ const Nav = () => {
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/contact' ? '50%' : '0%' }}
+            animate={{
+              width: location.pathname === '/contact' ? '100%' : '0%',
+            }}
           />
         </li>
       </ul>
@@ -159,7 +160,7 @@ const StyledNav = styled.nav`
 
 const Burger = styled.div`
   position: relative;
-  display: block;
+  display: none;
   cursor: pointer;
   z-index: 10;
 
@@ -177,8 +178,7 @@ const Line = styled(motion.div)`
   background: ${Colors.primaryColor};
   width: 0%;
   position: absolute;
-  bottom: -80%;
-  left: 55%;
+  bottom: -70%;
   @media (max-width: 1300px) {
     left: 0%;
   }

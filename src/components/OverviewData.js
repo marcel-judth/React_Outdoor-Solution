@@ -1,7 +1,7 @@
 import contactImage from '../img/contact-lake-image.JPG';
-import productsImage from '../img/100PercentBio.jpg';
+import productsImage from '../img/our-products-image.png';
 import projectsImage from '../img/projects-image.jpg';
-import aboutUsImage from '../img/logo_outdoor_solution.png';
+import aboutUsImage from '../img/about-us-image.png';
 
 export const OverviewData = [
   {
