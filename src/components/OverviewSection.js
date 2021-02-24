@@ -47,9 +47,9 @@ const OvervieCardsWrapper = styled.div`
   width: auto;
   overflow-x: auto;
   margin-bottom: 1rem;
-  padding-left: 5rem;
+  padding: 1rem 5rem 5rem 5rem;
   @media (max-width: 1000px) {
-    padding: 1rem 2.5rem;
+    padding: 0.5rem 2rem 2rem 2rem;
   }
 `;
 

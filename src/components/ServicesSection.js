@@ -188,6 +188,9 @@ const ServicesBody = styled(motion.div)`
   @media (max-width: 800px) {
     .question {
       width: 30rem;
+      max-width: 80%;
+    }
+    .line {
       max-width: 70%;
     }
     h4 {

@@ -14,7 +14,7 @@ const ContactSection = () => {
           <input type="text" placeholder="Nachricht" />
           <button>Senden</button>
         </ContactContainer>
-        <p>
+        <p className="contactInfoText">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste
           ratione, voluptates nobis ipsum unde ipsam eaque quasi quia natus!
         </p>
@@ -55,8 +55,6 @@ const ContactSection = () => {
       <Footer>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1369.648830556576!2d13.87505710061962!3d46.64063589313596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47708055371c03cd%3A0x17cd60b5ba54aade!2sMillst%C3%A4tter%20Str.%2052%2C%209523%20Villach!5e0!3m2!1sen!2sat!4v1613837143439!5m2!1sen!2sat"
-          width="250"
-          height="250"
           loading="lazy"
         ></iframe>
         <div className="footer-text">
@@ -84,6 +82,11 @@ const ContactSect = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  .contactInfoText {
+    margin: 1rem 0rem;
+  }
+
   .contact-text {
     height: 100%;
     min-height: 20rem;
@@ -122,7 +125,7 @@ const ContactContainer = styled.div`
   -moz-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
   box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
   position: absolute;
-  right: 3%;
+  right: 10%;
   top: 25%;
   background: white;
   display: flex;
@@ -154,6 +157,9 @@ const ContactContainer = styled.div`
     }
   }
 
+  @media (max-width: 1150px) {
+    right: 3%;
+  }
   @media (max-width: 800px) {
     display: none;
   }
@@ -162,7 +168,6 @@ const ContactContainer = styled.div`
 const Footer = styled.div`
   background: ${Colors.footerColor};
   height: 40vh;
-  min-height: 45vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -193,6 +198,8 @@ const Footer = styled.div`
     border: none;
     margin-left: 5rem;
     margin-right: 3rem;
+    height: 35vh;
+    width: 35vh;
   }
 
   @media (max-width: 1100px) {

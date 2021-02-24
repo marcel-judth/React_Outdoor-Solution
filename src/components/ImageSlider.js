@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
+import { RiArrowDropLeftFill, RiArrowDropRightFill } from 'react-icons/ri';
 import styled from 'styled-components';
 
 const ImageSlider = ({ slides }) => {
@@ -19,8 +19,8 @@ const ImageSlider = ({ slides }) => {
 
   return (
     <ImageSliderSection>
-      <FaArrowAltCircleLeft className="left-arrow" onClick={nextSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={prevSlide} />
+      <RiArrowDropLeftFill className="left-arrow" onClick={nextSlide} />
+      <RiArrowDropRightFill className="right-arrow" onClick={prevSlide} />
       {slides.map((slide, index) => {
         return (
           <div
@@ -42,7 +42,7 @@ const ImageSliderSection = styled.div`
   justify-content: center;
 
   img {
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     object-fit: cover;
   }
   .right-arrow {
