@@ -1,6 +1,7 @@
 //components and pages
 import Nav from './components/Nav';
 import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 //styles
 import GlobalStyles from './styles/GlobalStyles';
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/products" exact>
           <Products />
+        </Route>
+        <Route path="/projects" exact>
+          <Projects />
         </Route>
       </Switch>
     </div>
