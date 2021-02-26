@@ -8,6 +8,7 @@ import GlobalStyles from './styles/GlobalStyles';
 //Router
 import { Switch, Route, useLocation } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
+import Products from './pages/Products';
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/aboutus" exact>
           <AboutUs />
+        </Route>
+        <Route path="/products" exact>
+          <Products />
         </Route>
       </Switch>
     </div>

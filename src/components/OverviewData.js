@@ -23,7 +23,7 @@ export const OverviewData = [
     title: 'Produkte',
     text:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, distinctio.',
-    link: '/aboutus',
+    link: '/products',
   },
   {
     image: contactImage,
