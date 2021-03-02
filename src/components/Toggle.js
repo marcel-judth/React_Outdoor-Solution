@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import styled from 'styled-components';
 
-const Toggle = ({ children, title, iconName }) => {
+const Toggle = ({ text, title, iconName }) => {
   const [toggle, settoggle] = useState(false);
   return (
     <motion.div className="question" layout onClick={() => settoggle(!toggle)}>
@@ -9,7 +10,6 @@ const Toggle = ({ children, title, iconName }) => {
         <motion.div layout className="toggle-icon-container">
           <i class={iconName}></i>
         </motion.div>
-
         <motion.h4 layout>{title}</motion.h4>
         <motion.div className="toggle-arrow-container" layout>
           {toggle ? (
@@ -20,7 +20,13 @@ const Toggle = ({ children, title, iconName }) => {
         </motion.div>
       </div>
 
-      {toggle ? children : ''}
+      {toggle ? (
+        <div className="answer">
+          <p>{text}</p>
+        </div>
+      ) : (
+        ''
+      )}
       <div className="faq-line"></div>
     </motion.div>
   );

@@ -4,7 +4,7 @@ import { OverviewData } from './OverviewData';
 
 const OverviewSection = () => {
   return (
-    <OverviewSect>
+    <OverviewSect id="overview">
       <h2>Überblick</h2>
       <OvervieCardsWrapper>
         {OverviewData.map((card, index) => {

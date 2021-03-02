@@ -5,7 +5,7 @@ import { Colors } from '../styles/Colors';
 const ProductCard = ({ image, title, price, options, link }) => {
   return (
     <Card>
-      <img src={image} alt="product image" />
+      <img src={image} loading="lazy" alt="product image" />
       <h3>{title}</h3>
       <h4>{price}</h4>
       <a href="/">mehr Infos</a>
@@ -18,19 +18,19 @@ const ProductCard = ({ image, title, price, options, link }) => {
 };
 
 const Card = styled.div`
-  -webkit-box-shadow: 0px 9px 49px -13px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 9px 49px -13px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 9px 49px -13px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 0rem;
   justify-content: space-around;
   background: white;
-  min-width: 20rem;
-  height: 60vh;
-  min-height: 30rem;
-  margin-right: 2rem;
+  min-width: 25rem;
+  height: auto;
+  min-height: auto;
+  margin-right: 4rem;
   img {
     border-radius: 50%;
     height: 20vh;

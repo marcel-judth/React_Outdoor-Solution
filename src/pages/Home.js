@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div className="home-page">
       <LandingSection />
-      <ServicesSection />
+      <ServicesSection id="services" />
       <OverviewSection />
-      <ContactSection />
+      <ContactSection id="contact" />
     </div>
   );
 };

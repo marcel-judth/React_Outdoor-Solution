@@ -7,6 +7,8 @@ import logoImg from '../img/logo_outdoor_solution.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 //router
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 //animation
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -47,7 +49,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/overview">Überblick</Link>
+          <Link to="#overview">Überblick</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
@@ -67,7 +69,7 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="/contact">Kontakt</Link>
+          <Link to="/#contact">Kontakt</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}

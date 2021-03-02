@@ -19,23 +19,37 @@ function AboutUs() {
           variants={lineAnimAboutUs}
         ></motion.div>
         <p>
-          Bei Outdoorsolutions handelt es sich um ein GALA-Bau-Unternehmen
-          (Garten und Landschaftstbauunternehmen), dass sich vorwiegend mit Neu-
-          als auch Umgeschtaltungen vorhandener Grünflächen beschäftigt.
+          Outdoor Solution ist ein{' '}
+          <span>Garten- und Landschaftsbauunternehmen.</span> Wir beschäftigen
+          uns vorwiegend mit der Neu- und Umgestaltung von Gärten. Gerne kümmern
+          wir uns um die Planung, Durchführung und Nachbetreuung Ihres
+          persönlichen Feriendomizils „Garten“.
         </p>
         <br />
+        <br />
+
         <p>
-          Ferner kümmern wir uns um die Planung, Durchführung und Nachbetreueung
-          Ihres persönlichen Feriendomizils “Garten”. Abgerundet werden unsere
-          Leistungen durch die Verwirklichung Ihres biologischen Naturpools
-          (Teiche, Wasserspiele, Bachläufe, Whirlpools, u.v.m.).
+          Wir von Outdoor Solution unterstützen Sie bei die Verwirklichung Ihres{' '}
+          <span>biologischen Naturpools</span>, sowie Teiche, Wasserspiel,
+          Bachläufe, Whirlpools und vieles mehr….
         </p>
         <br />
+        <br />
+
         <p>
-          Es ist uns ein wichtiges Anliegen, ganz auf Ihre individuellen
-          Vorstellungen einzugehen! Des Weiteren legen wir großen Wert auf
-          persönliche Betreuung, um für Sie die perfekte Dienstleistung zu
-          gewährleisten.
+          Wir von Outdoor Solution stehen für den Einbau von{' '}
+          <span>nachhaltigen Materialien</span> wie Holz, Naturstein und Metall.
+          Dabei setzen wir auf qualitativ hochwertige Produkte welche vorwiegend
+          aus Österreich und Deutschland stammen.
+        </p>
+        <br />
+        <br />
+
+        <p>
+          Es ist uns und ein wichtiges Anliegen, auf Ihre individuellen Wünsche
+          einzugehen. Des Weiteren legen wir großen Wert auf{' '}
+          <span>persönliche Betreuung</span> und schaffen in Ihrem Garten eine
+          Oase der Entspannung.
         </p>
       </AboutUsText>
     </AboutUsSection>
@@ -61,6 +75,10 @@ const AboutUsSection = styled.div`
     opacity: 0.8;
     margin-top: 1rem;
     margin-bottom: 3rem;
+  }
+
+  span {
+    font-weight: bold;
   }
 
   @media (max-width: 1200px) {

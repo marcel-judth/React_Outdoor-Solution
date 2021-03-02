@@ -16,7 +16,11 @@ const LandingSection = () => {
         animate={{ transform: 'translateX(0%)', opacity: 1 }}
       >
         <Hide>
-          <motion.img src={logoImage} alt="logo Outdoor Solution" />
+          <motion.img
+            src={logoImage}
+            loading="lazy"
+            alt="logo Outdoor Solution"
+          />
         </Hide>
         <Hide>
           <motion.p variants={titleAnim} initial="hidden" animate="show">

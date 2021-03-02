@@ -11,7 +11,7 @@ const ContactSection = () => {
           <input type="text" placeholder="Name" />
           <input type="text" placeholder="Tel. oder Email" />
           <input type="text" placeholder="PLZ" />
-          <input type="text" placeholder="Nachricht" />
+          <textarea placeholder="Nachricht" />
           <button>Senden</button>
         </ContactContainer>
         <p className="contactInfoText">
@@ -143,6 +143,14 @@ const ContactContainer = styled.div`
     width: 70%;
     padding: 0rem 1rem;
   }
+
+  textarea {
+    width: 70%;
+    height: 20%;
+    font-family: 'montserrat', sans-serif;
+    padding: 0.5rem 1rem;
+  }
+
   button {
     border: none;
     background: ${Colors.primaryColor};

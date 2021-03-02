@@ -19,13 +19,6 @@ function ProjectsGrid() {
             />
           );
         })}
-        {/* <Project image={gartenfaser} text="hello" />
-        <Project image={Teich} text="343" />
-        <Project image={logo} text="h32ello" />
-        <Project image={gartenfaser} text="h34ello" />
-        <Project image={lake} text="hel34lo" />
-        <Project image={Teich} text="h34ello" />
-        <Project image={Teich} text="he341llo" /> */}
       </ImageGallery>
     </ProjectsWrapper>
   );
@@ -105,8 +98,14 @@ const ImageGallery = styled.div`
       grid-row: span 2;
     }
 
+    .gallery-item:nth-child(4),
+    .gallery-item:nth-child(8) {
+      grid-column: 2/3;
+      grid-row: span 1;
+    }
+
     .gallery-item:nth-child(6),
-    .gallery-item:nth-child(6) {
+    .gallery-item:nth-child(8) {
       grid-row: span 2;
     }
   }

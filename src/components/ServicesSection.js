@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { fade, lineAnim } from '../Animation';
 import { useScroll } from './useScroll';
 import { Colors } from '../styles/Colors';
+import { ToggleData } from './ToggleData';
 
 const ServicesSection = () => {
   const [element, controls] = useScroll(0.3);
@@ -32,65 +33,18 @@ const ServicesSection = () => {
         <ImageSlider className="image-slider" slides={SliderData} />
         <div className="services">
           <AnimateSharedLayout>
-            <ToggleContainer>
-              <Toggle title="Planung von Gärten" iconName="fas fa-pencil-ruler">
-                <div className="answer">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quos, tempore?
-                  </p>
-                </div>
-              </Toggle>
-            </ToggleContainer>
-
-            <ToggleContainer>
-              <Toggle title="Gestaltung von Gärten" iconName="fas fa-seedling">
-                <div className="answer">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quos, tempore?
-                  </p>
-                </div>
-              </Toggle>
-            </ToggleContainer>
-
-            <ToggleContainer>
-              <Toggle title="Pool- & Teichbau" iconName="fas fa-water">
-                <div className="answer">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quos, tempore?
-                  </p>
-                </div>
-              </Toggle>
-            </ToggleContainer>
-
-            <ToggleContainer>
-              <Toggle title="Gartenpflege" iconName="fas fa-seedling">
-                <div className="answer">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quos, tempore?
-                  </p>
-                </div>
-              </Toggle>
-            </ToggleContainer>
-
-            <ToggleContainer>
-              <Toggle title="Baumschnitt" iconName="fas fa-seedling">
-                <div className="answer">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Quos, tempore?
-                  </p>
-                </div>
-              </Toggle>
-            </ToggleContainer>
+            {ToggleData.map((toggle, index) => {
+              return (
+                <ToggleContainer>
+                  <Toggle
+                    title={toggle.title}
+                    iconName={toggle.iconName}
+                    text={toggle.text}
+                    key={index}
+                  />
+                </ToggleContainer>
+              );
+            })}
           </AnimateSharedLayout>
         </div>
       </ServicesContainer>
@@ -152,7 +106,7 @@ const ServicesBody = styled(motion.div)`
     margin-left: 5rem;
     p {
       padding: 0.5rem 0rem;
-      font-size: 0.8rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -213,6 +167,7 @@ const ToggleContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: auto;
+  max-height: 60vh;
 `;
 
 export default ServicesSection;

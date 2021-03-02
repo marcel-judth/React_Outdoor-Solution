@@ -4,7 +4,7 @@ import { Colors } from '../styles/Colors';
 const OverviewCard = ({ image, title, text, link }) => {
   return (
     <Card>
-      <img src={image} alt="" />
+      <img src={image} loading="lazy" alt="" />
       <div className="card-line"></div>
       <h3>{title}</h3>
       <p>{text}</p>
@@ -59,7 +59,7 @@ const Card = styled.div`
     margin-bottom: 2rem;
     border: none;
     background: ${Colors.primaryColor};
-    padding: 0.4rem 2rem;
+    padding: 0.8rem 4rem;
     transition: 0.75s ease;
     border-radius: 0.2rem;
     cursor: pointer;
