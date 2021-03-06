@@ -18,9 +18,6 @@ function App() {
       <GlobalStyles />
       <Nav />
       <Switch location={location} key={location.pathname}>
-        <Route path="/" exact>
-          <Home />
-        </Route>
         <Route path="/aboutus" exact>
           <AboutUs />
         </Route>
@@ -29,6 +26,9 @@ function App() {
         </Route>
         <Route path="/projects" exact>
           <Projects />
+        </Route>
+        <Route path="/">
+          <Home />
         </Route>
       </Switch>
     </div>

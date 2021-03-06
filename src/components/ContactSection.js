@@ -22,7 +22,7 @@ const ContactSection = () => {
   };
 
   return (
-    <ContactSect>
+    <ContactSect id="contact">
       <div className="contact-text">
         <h2>Kontakt</h2>
 

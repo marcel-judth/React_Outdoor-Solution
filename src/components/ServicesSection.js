@@ -12,16 +12,11 @@ import { Colors } from '../styles/Colors';
 import { ToggleData } from './ToggleData';
 
 const ServicesSection = () => {
-  const [element, controls] = useScroll(0.3);
+  // const [element, controls] = useScroll(0.1);
   const [lineElement, lineControls] = useScroll(0.5);
 
   return (
-    <ServicesBody
-      variants={fade}
-      ref={element}
-      animate={controls}
-      initial="hidden"
-    >
+    <ServicesBody>
       <h2>Leistungen</h2>
       <motion.div
         className="line"
@@ -54,7 +49,8 @@ const ServicesSection = () => {
 
 const ServicesBody = styled(motion.div)`
   background: white;
-  height: 100vh;
+  height: auto;
+  min-height: 90vh;
   padding-top: 12rem;
   padding-left: 5rem;
 
@@ -153,14 +149,18 @@ const ServicesBody = styled(motion.div)`
       margin: 0rem 0rem;
     }
     padding: auto;
+
+    .answer {
+      margin-left: 2rem;
+    }
   }
 `;
 
 const ServicesContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
-  height: 70vh;
+  height: auto;
 `;
 
 const ToggleContainer = styled.div`

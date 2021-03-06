@@ -1,20 +1,20 @@
-import whirlpoolImage from '../img/whirlpool-image.JPG';
-import zierTeich from '../img/Zierteich.jpg';
+import img1 from '../img/Brunnen.jpg';
+import img2 from '../img/faaker-see-baum.jpg';
 import teich from '../img/Teich.jpg';
-import garden from '../img/Garten-Gestalung.JPG';
+import garden from '../img/Gartengestaltung.jpg';
 
 export const SliderData = [
   {
-    image: whirlpoolImage,
-    altText: 'whirlpool image outdoor solution',
-  },
-  {
-    image: zierTeich,
-    altText: 'whirlpool image outdoor solution',
-  },
-  {
     image: teich,
     altText: 'teich image outdoor solution',
+  },
+  {
+    image: img1,
+    altText: 'whirlpool image outdoor solution',
+  },
+  {
+    image: img2,
+    altText: 'whirlpool image outdoor solution',
   },
   {
     image: garden,

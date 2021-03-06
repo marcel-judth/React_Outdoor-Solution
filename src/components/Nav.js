@@ -3,11 +3,9 @@ import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 //images
 import logoImg from '../img/logo_outdoor_solution.png';
-//icons
-import { FaBars, FaTimes } from 'react-icons/fa';
 //router
-import { Link, useLocation } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { useLocation } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 //animation
 import { motion } from 'framer-motion';
@@ -16,9 +14,12 @@ import { useState } from 'react';
 const Nav = () => {
   const location = useLocation();
   const [navStatus, setNavStatus] = useState(false);
+  console.log(location.pathname);
   return (
     <StyledNav>
-      <img src={logoImg} alt="logo Outdoor Solution" />
+      <Link to="/">
+        <img src={logoImg} alt="logo Outdoor Solution" />
+      </Link>
 
       <Burger
         className={`burger ${navStatus ? 'toggle' : ''}`}
@@ -49,12 +50,12 @@ const Nav = () => {
           />
         </li>
         <li>
-          <Link to="#overview">Überblick</Link>
+          <Link to="/products">Produkte</Link>
           <Line
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{
-              width: location.pathname === '/overview' ? '100%' : '0%',
+              width: location.pathname === '/products' ? '100%' : '0%',
             }}
           />
         </li>
@@ -74,7 +75,7 @@ const Nav = () => {
             transition={{ duration: 0.75 }}
             initial={{ width: '0%' }}
             animate={{
-              width: location.pathname === '/contact' ? '100%' : '0%',
+              width: location.pathname === '#contact' ? '100%' : '0%',
             }}
           />
         </li>
@@ -113,13 +114,6 @@ const StyledNav = styled.nav`
     color: white;
     font-weight: 300;
   }
-
-  /* .burger {
-    color: white;
-    font-size: 2rem;
-    display: none;
-    z-index: 10;
-  } */
 
   .toggle {
     .line1 {
