@@ -3,31 +3,25 @@ import { Hide } from '../styles/Styles';
 import landingImage from '../img/home_landing_image.jpg';
 import logoImage from '../img/logo_outdoor_solution.png';
 import { motion } from 'framer-motion';
-import { titleAnim } from '../Animation';
 
 const LandingSection = () => {
   return (
     <HomeLanding>
-      {/* <img src={landingImage} alt="Bild Teich" /> */}
-
       <HomeLandingText
-        transition={{ duration: 1 }}
+        transition={{ duration: 1.5, delay: 2 }}
         initial={{ transform: 'translateX(100%)', opacity: 0 }}
         animate={{ transform: 'translateX(0%)', opacity: 1 }}
       >
         <Hide>
-          <motion.img
-            src={logoImage}
-            loading="lazy"
-            alt="logo Outdoor Solution"
-          />
+          <img src={logoImage} loading="lazy" alt="logo Outdoor Solution" />
         </Hide>
         <Hide>
-          <motion.p variants={titleAnim} initial="hidden" animate="show">
-            Stell dir vor, Bäume würden gratis WLAN aussenden! Wir würden Sie
-            überall pflanzen! Ein Jammer, dass sie nur die Luft produzieren, die
-            wir atmen...
-          </motion.p>
+          <p>
+            Stell dir vor, <span>Bäume</span> würden gratis <span>WLAN </span>
+            aussenden! Wir würden Sie
+            <span> überall pflanzen</span>! Ein <span>Jammer</span>, dass sie
+            nur die <span>Luft</span> produzieren, die wir <span>atmen</span>...
+          </p>
         </Hide>
       </HomeLandingText>
     </HomeLanding>
@@ -62,7 +56,7 @@ const HomeLandingText = styled(motion.div)`
   justify-content: space-evenly;
   top: 35%;
   right: 10%;
-  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  padding: 3rem 2rem 2rem 2rem;
   background: rgba(0, 0, 0, 0.8);
   img {
     position: relative;
@@ -72,9 +66,13 @@ const HomeLandingText = styled(motion.div)`
   }
   p {
     color: white;
-    opacity: 0.7;
     text-align: justify;
     font-weight: 400;
+
+    span {
+      font-weight: bold;
+      opacity: 1;
+    }
   }
   @media (max-width: 800px) {
     padding: 1rem 2rem;

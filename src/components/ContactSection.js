@@ -2,26 +2,85 @@ import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 
 const ContactSection = () => {
+  const submitForm = (ev) => {
+    ev.preventDefault();
+    const form = ev.target;
+    const data = new FormData(form);
+    const xhr = new XMLHttpRequest();
+    xhr.open(form.method, form.action);
+    xhr.setRequestHeader('Accept', 'application/json');
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState !== XMLHttpRequest.DONE) return;
+      if (xhr.status === 200) {
+        form.reset();
+        console.log('SUCCESS');
+      } else {
+        console.log('ERROR', xhr);
+      }
+    };
+    xhr.send(data);
+  };
+
   return (
     <ContactSect>
       <div className="contact-text">
         <h2>Kontakt</h2>
+
         <ContactContainer>
-          <h3>Schreiben Sie uns</h3>
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Tel. oder Email" />
-          <input type="text" placeholder="PLZ" />
-          <textarea placeholder="Nachricht" />
-          <button>Senden</button>
+          <form
+            onSubmit={submitForm}
+            action="https://formspree.io/f/mzbklnpk"
+            method="POST"
+          >
+            <h3>Schreiben Sie uns</h3>
+            <input
+              id="txtName"
+              placeholder="Name"
+              type="text"
+              name="Name"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+              required
+            />
+            <input
+              id="txtContact"
+              name="Kontakt"
+              type="text"
+              placeholder="Tel. oder Email"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+              required
+            />
+            <input
+              id="txtPLZ"
+              name="PLZ"
+              type="text"
+              placeholder="PLZ"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+            />
+            <textarea
+              id="txtMessage"
+              name="Nachricht"
+              placeholder="Nachricht"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+            />
+            <button type="submit">Senden</button>
+          </form>
         </ContactContainer>
+
         <p className="contactInfoText">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem iste
-          ratione, voluptates nobis ipsum unde ipsam eaque quasi quia natus!
+          Wir sind für Sie da und freuen uns auf Ihren Anruf!
         </p>
         <div className="contact-info">
           <div className="info">
             <i class="fas fa-phone-alt"></i>
-            <a href="tel:+43 578828">+43 676 894 2849</a>
+            <a href="tel:+436607398100">+43 660 739 81 00</a>
           </div>
           <div className="info">
             <i class="fas fa-envelope"></i>
@@ -63,8 +122,8 @@ const ContactSection = () => {
           <p>Millstätter Straße 52</p>
           <p>9523 Villach, AT</p>
           <br />
-          <p>Mo-Fr 08:00-17:00</p>
-          <a href="tel:+43 578828">+43 676 894 2849</a>
+          <p>Mo-Do 08:00-17:00 | Fr 08:00-12:00</p>
+          <a href="tel:+436607398446">+43 660 739 84 46</a>
           <a href="mailto:office@outdoorsolution.at">
             office@outdoorsolution.at
           </a>
@@ -121,55 +180,59 @@ const ContactSect = styled.div`
 `;
 
 const ContactContainer = styled.div`
-  -webkit-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
-  -moz-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
-  box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
-  position: absolute;
-  right: 10%;
-  top: 25%;
-  background: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 25%;
-  min-width: 25rem;
-  min-height: 20rem;
-  height: 50%;
-  input {
-    border: none;
-    border: 0.1rem solid ${Colors.primaryColor};
-    height: 2rem;
-    width: 70%;
-    padding: 0rem 1rem;
-  }
-
-  textarea {
-    width: 70%;
-    height: 20%;
-    font-family: 'montserrat', sans-serif;
-    padding: 0.5rem 1rem;
-  }
-
-  button {
-    border: none;
-    background: ${Colors.primaryColor};
-    padding: 0.7rem 0rem;
-    width: 70%;
-    color: white;
-    cursor: pointer;
-    transition: 1s ease;
-    &:hover {
-      transform: scale(1.1);
-      transition: 1s ease;
+  form {
+    -webkit-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
+    -moz-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
+    box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 25%;
+    min-width: 25rem;
+    min-height: 20rem;
+    height: 50%;
+    input {
+      border: none;
+      border: 0.1rem solid ${Colors.primaryColor};
+      height: 2rem;
+      width: 70%;
+      padding: 0rem 1rem;
     }
-  }
 
-  @media (max-width: 1150px) {
-    right: 3%;
-  }
-  @media (max-width: 800px) {
-    display: none;
+    textarea {
+      width: 70%;
+      height: 20%;
+      font-family: 'montserrat', sans-serif;
+      padding: 0.5rem 1rem;
+      border: none;
+      border: 0.1rem solid ${Colors.primaryColor};
+    }
+
+    button {
+      border: none;
+      background: ${Colors.primaryColor};
+      padding: 0.7rem 0rem;
+      width: 70%;
+      color: white;
+      cursor: pointer;
+      transition: 1s ease;
+      &:hover {
+        transform: scale(1.1);
+        transition: 1s ease;
+      }
+    }
+
+    @media (max-width: 1150px) {
+      right: 3%;
+    }
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 `;
 

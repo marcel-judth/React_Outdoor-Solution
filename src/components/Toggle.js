@@ -11,7 +11,7 @@ const Toggle = ({ text, title, iconName }) => {
           <i class={iconName}></i>
         </motion.div>
         <motion.h4 layout>{title}</motion.h4>
-        <motion.div className="toggle-arrow-container" layout>
+        <motion.div layout className="toggle-arrow-container">
           {toggle ? (
             <i class="fas fa-angle-up"></i>
           ) : (

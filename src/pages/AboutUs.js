@@ -61,7 +61,7 @@ const AboutUsSection = styled.div`
   padding-top: 15vh;
 
   display: flex;
-  height: 90vh;
+  height: auto;
   align-items: center;
   justify-content: center;
   img {
@@ -70,7 +70,7 @@ const AboutUsSection = styled.div`
     object-fit: cover;
   }
   .line {
-    height: 0.4rem;
+    height: 0.2rem;
     background: ${Colors.primaryColor};
     opacity: 0.8;
     margin-top: 1rem;
