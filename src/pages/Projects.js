@@ -6,7 +6,7 @@ function Projects() {
   return (
     <ProjectsWrapper>
       <h2>Projekte</h2>
-      <p>
+      <p className="projects-text">
         Egal ob es sich um ein größeres oder kleineres Projekt handelt – wir
         kümmern uns um die Verwirklichung Ihrer Ideen, Ihrer lang ersehnten
         Wünsche! Wir haben für Sie eine Auswahl unserer Projekte
@@ -25,8 +25,9 @@ const ProjectsWrapper = styled.div`
   h2 {
     margin-bottom: 2rem;
   }
-  p {
+  .projects-text {
     line-height: 2rem;
+    margin-bottom: 1.5rem;
   }
 `;
 
