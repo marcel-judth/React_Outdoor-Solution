@@ -145,35 +145,10 @@ const ImageGallery = styled.div`
     grid-template-rows: repeat() (auto-flow);
     grid-row-gap: 1rem;
     grid-column-gap: 1rem;
-    /* grid-auto-flow: row dense; */
-
-    /* .gallery-item {
-      margin: 0.5rem;
-    }
-
-    .gallery-item::first-child {
-      grid-row: span 1;
-    }
-
-    .gallery-item:nth-child(2) {
-      grid-column: 2/3;
-      grid-row: span 2;
-    }
-
-    .gallery-item:nth-child(4),
-    .gallery-item:nth-child(8) {
-      grid-column: 2/3;
-      grid-row: span 1;
-    }
-
-    .gallery-item:nth-child(6),
-    .gallery-item:nth-child(8) {
-      grid-row: span 2;
-    } */
   }
 
   @media (min-width: 960px) {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat() (auto-flow);
     grid-row-gap: 1rem;
     grid-column-gap: 1rem;
