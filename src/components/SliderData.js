@@ -1,4 +1,4 @@
-import img1 from '../img/Brunnen.jpg';
+import img1 from '../img/faaker-see-garten.jpg';
 import img2 from '../img/faaker-see-baum.jpg';
 import teich from '../img/Teich.jpg';
 import garden from '../img/Gartengestaltung.jpg';
