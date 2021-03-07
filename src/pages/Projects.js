@@ -8,8 +8,8 @@ function Projects() {
       <h2>Projekte</h2>
       <p className="projects-text">
         Egal ob es sich um ein größeres oder kleineres Projekt handelt – wir
-        kümmern uns um die Verwirklichung Ihrer Ideen, Ihrer lang ersehnten
-        Wünsche! Wir haben für Sie eine Auswahl unserer Projekte
+        kümmern uns um die <span> Verwirklichung Ihrer Ideen</span>, Ihrer lang
+        ersehnten Wünsche! Wir haben für Sie eine Auswahl unserer Projekte
         zusammengestellt. Lassen Sie sich durch unsere Vorschläge für Ihr
         nächstes Projekt mit Outdoor Solution inspirieren.
       </p>
@@ -28,6 +28,9 @@ const ProjectsWrapper = styled.div`
   .projects-text {
     line-height: 2rem;
     margin-bottom: 1.5rem;
+    span {
+      font-weight: bold;
+    }
   }
 `;
 

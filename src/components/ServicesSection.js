@@ -3,13 +3,11 @@ import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
 import ImageSlider from './ImageSlider';
 import { GiFruitTree, GiSeedling, GiPencilRuler } from 'react-icons/gi';
-import { FaSeedling, FaWater } from 'react-icons/fa';
 import { SliderData } from './SliderData';
 import { motion } from 'framer-motion';
-import { fade, lineAnim } from '../Animation';
+import { lineAnim } from '../Animation';
 import { useScroll } from './useScroll';
 import { Colors } from '../styles/Colors';
-import { ToggleData } from './ToggleData';
 
 const ServicesSection = () => {
   // const [element, controls] = useScroll(0.1);
@@ -28,18 +26,73 @@ const ServicesSection = () => {
         <ImageSlider className="image-slider" slides={SliderData} />
         <div className="services">
           <AnimateSharedLayout>
-            {ToggleData.map((toggle, index) => {
-              return (
-                <ToggleContainer>
-                  <Toggle
-                    title={toggle.title}
-                    iconName={toggle.iconName}
-                    text={toggle.text}
-                    key={index}
-                  />
-                </ToggleContainer>
-              );
-            })}
+            <ToggleContainer>
+              <Toggle title="Planung von Gärten" iconName="fas fa-pencil-ruler">
+                <div className="answer">
+                  <p>
+                    Sie wünschen sich einen<span> Traumgarten?</span> <br />
+                    Einen Garten der komplett auf Ihre individuellen Bedürfnisse
+                    abgestimmt ist? Einen Garten, der sich von anderen Gärten
+                    abhebt? Dann sind sie bei uns richtig! Outdoor Solution
+                    bietet Ihnen das kreative Knowhow zur Planung und
+                    Weiterentwicklung Ihres Gartens.
+                  </p>
+                </div>
+              </Toggle>
+            </ToggleContainer>
+            <ToggleContainer>
+              <Toggle title="Gestaltung von Gärten" iconName="fas fa-seedling">
+                <div className="answer">
+                  <p>
+                    Outdoor Solution kümmert sich um die Gestaltung und
+                    Umgestaltung Ihres Gartens, der heutzutage nicht nur zum
+                    Anbau von Obst- und Gemüsesorten genutzt wird, sondern viel
+                    mehr zum „erweiterten Wohnraum“ wird. Outdoor Solution
+                    bietet Ihnen die{' '}
+                    <span> modernsten Gestaltungsmöglichkeiten </span> für Ihren
+                    Garten. Lassen Sie uns gemeinsam Highlights setzen!
+                  </p>
+                </div>
+              </Toggle>
+            </ToggleContainer>
+            <ToggleContainer>
+              <Toggle title="Baumschnitt" iconName="fas fa-tree">
+                <div className="answer">
+                  <p>
+                    Wir kümmern uns um die
+                    <span> notwendigen Schnittmaßnahmen </span> für Ihre
+                    Pflanzen. Der regelmäßige Schnitt, ist für eine gute Ernte
+                    unverzichtbar. Um Krankheiten und Schädlingen vorzubeugen
+                    und eine optimale Fruchtbildung zu gewährleisten.
+                  </p>
+                </div>
+              </Toggle>
+            </ToggleContainer>
+            <ToggleContainer>
+              <Toggle title="Gartenpflege" iconName="fas fa-hand-holding-water">
+                <div className="answer">
+                  <p>
+                    Outdoor Solution verfügt über die nötige Expertise, um die
+                    Schönheit Ihres Gartens über die gesamte Vegetationsperiode
+                    hinweg zu erhalten - angefangen bei der{' '}
+                    <span> Frühjahrspflege</span> bis hin zur fachgerechten
+                    <span> Überwinterung </span> Ihrer Pflanzen.
+                  </p>
+                </div>
+              </Toggle>
+            </ToggleContainer>
+            <ToggleContainer>
+              <Toggle title="Teich- und Poolbau" iconName="fas fa-water">
+                <div className="answer">
+                  <p>
+                    Wie wäre es mit einem eigenen ökologischen Schwimmteich in
+                    Ihrem Garten? Zählen Sie zu den Naturpoolfreunden? Outdoor
+                    Solution plant, gestaltet und kümmert sich um die bauliche
+                    Umsetzung Ihrer <span>eigenen Wasserlandschaft.</span>
+                  </p>
+                </div>
+              </Toggle>
+            </ToggleContainer>
           </AnimateSharedLayout>
         </div>
       </ServicesContainer>
@@ -65,10 +118,6 @@ const ServicesBody = styled(motion.div)`
   img {
     height: 50vh;
     width: 35vw;
-  }
-
-  span {
-    display: block;
   }
 
   h4 {
@@ -103,6 +152,10 @@ const ServicesBody = styled(motion.div)`
     p {
       padding: 0.5rem 0rem;
       font-size: 1.2rem;
+
+      span {
+        font-weight: bold;
+      }
     }
   }
 

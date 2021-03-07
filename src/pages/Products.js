@@ -1,18 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProductsList from '../components/ProductsList';
+import { Colors } from '../styles/Colors';
 
 function Products() {
   return (
     <ProductsSection>
       <ProductsHeader>
-        <h2>Unsere Produkte</h2>
-        <select name="filterBox" id="filterBox">
+        <h2>Unsere Produkte sind bald für Sie verfügbar!</h2>
+        {/* <select name="filterBox" id="filterBox">
           <option value="all">All</option>
           <option value="saab">Erde</option>
           <option value="mercedes">Teich</option>
           <option value="audi">andere</option>
-        </select>
+        </select> */}
       </ProductsHeader>
       <ProductsList />
     </ProductsSection>
@@ -21,6 +22,15 @@ function Products() {
 
 const ProductsSection = styled.div`
   padding-top: 15vh;
+
+  h1 {
+    font-size: 2.5rem;
+    color: ${Colors.primaryColor};
+    font-weight: 500;
+    margin-top: 2rem;
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+  }
 `;
 
 const ProductsHeader = styled.div`
