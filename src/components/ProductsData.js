@@ -9,6 +9,8 @@ export const ProductsData = [
     price: '6,40 €/L',
     options: ['5 Liter', '10 Liter', '30 Liter'],
     image: PflanzenerdeImage,
+    infoText:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta molestiae eaque consequuntur natus ex possimus aperiam deleniti? Quos, ipsum assumenda.',
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ export const ProductsData = [
     price: '6,40 €/L',
     options: ['5 Liter', '10 Liter', '30 Liter'],
     image: BlumenerdeImage,
+    infoText:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta molestiae eaque consequuntur natus ex possimus aperiam deleniti? Quos, ipsum assumenda.',
   },
   {
     id: 3,
@@ -23,6 +27,8 @@ export const ProductsData = [
     price: '6,40 €/L',
     options: ['5 Liter', '10 Liter', '30 Liter'],
     image: GartenfaserImage,
+    infoText:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta molestiae eaque consequuntur natus ex possimus aperiam deleniti? Quos, ipsum assumenda.',
   },
   {
     id: 4,
@@ -30,6 +36,8 @@ export const ProductsData = [
     price: '6,40 €/L',
     options: ['5 Liter', '10 Liter', '30 Liter'],
     image: PflanzenerdeImage,
+    infoText:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta molestiae eaque consequuntur natus ex possimus aperiam deleniti? Quos, ipsum assumenda.',
   },
   {
     id: 5,
@@ -37,5 +45,7 @@ export const ProductsData = [
     price: '6,40 €/L',
     options: ['5 Liter', '10 Liter', '30 Liter'],
     image: PflanzenerdeImage,
+    infoText:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta molestiae eaque consequuntur natus ex possimus aperiam deleniti? Quos, ipsum assumenda.',
   },
 ];

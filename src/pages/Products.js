@@ -7,13 +7,13 @@ function Products() {
   return (
     <ProductsSection>
       <ProductsHeader>
-        <h2>Unsere Produkte sind bald für Sie verfügbar!</h2>
-        {/* <select name="filterBox" id="filterBox">
+        <h2>Unsere Produkte</h2>
+        <select name="filterBox" id="filterBox">
           <option value="all">All</option>
           <option value="saab">Erde</option>
           <option value="mercedes">Teich</option>
           <option value="audi">andere</option>
-        </select> */}
+        </select>
       </ProductsHeader>
       <ProductsList />
     </ProductsSection>
