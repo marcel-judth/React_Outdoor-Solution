@@ -1,21 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import ProductsList from '../components/ProductsList';
 import { Colors } from '../styles/Colors';
+import { ProductsData } from '../components/ProductsData';
 
 function Products() {
+  const filters = [...new Set(ProductsData.map((item) => item.category))];
+  filters.unshift('Alle');
+  const [products, setproducts] = useState(ProductsData);
+
+  const selectionChanged = (e) => {
+    console.log(e.target.value);
+
+    if (e.target.value === 'Alle') setproducts(ProductsData);
+    else setproducts(ProductsData.filter((p) => p.category === e.target.value));
+  };
+
   return (
     <ProductsSection>
       <ProductsHeader>
         <h2>Unsere Produkte</h2>
-        <select name="filterBox" id="filterBox">
-          <option value="all">All</option>
-          <option value="saab">Erde</option>
-          <option value="mercedes">Teich</option>
-          <option value="audi">andere</option>
+        <select onChange={selectionChanged} name="filterBox" id="filterBox">
+          {filters.map((option) => {
+            return <option value={option}>{option}</option>;
+          })}
         </select>
       </ProductsHeader>
-      <ProductsList />
+      <ProductsList ProductsData={products} />
     </ProductsSection>
   );
 }

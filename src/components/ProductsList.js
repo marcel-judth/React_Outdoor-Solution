@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Colors } from '../styles/Colors';
 import ProductCard from './ProductCard';
-import { ProductsData } from './ProductsData';
-const ProductsList = () => {
+
+const ProductsList = ({ ProductsData }) => {
   return (
     // <ComingSoon>
     //   <div className="icon-wrapper">
@@ -51,11 +50,11 @@ const ProductsList = () => {
 
 const ProductsWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 100%;
   width: 100%;
   height: 70vh;
-  min-height: 40rem;
+  min-height: 35rem;
   padding: 1.5rem 5rem 5rem 5rem;
   overflow: scroll;
   @media (max-width: 700px) {

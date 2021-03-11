@@ -42,6 +42,9 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
       <h4>{price}</h4>
       <a onClick={openModal}>mehr Infos</a>
       <select name="" id="">
+        {options.map((option) => {
+          return <option value={option}>{option}</option>;
+        })}
         <option value="5liter">5 Liter</option>
       </select>
       <button onClick={openBuy}>Bestellen</button>
@@ -235,9 +238,9 @@ const ProductDetails = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 30rem;
-  height: 80%;
-  max-height: 40rem;
+  max-width: 35rem;
+  height: auto;
+  max-height: auto;
   min-height: 25rem;
   background: white;
   display: flex;
@@ -252,6 +255,7 @@ const ProductDetails = styled.div`
 
   p {
     text-align: justify;
+    margin: 2rem 0rem;
   }
 
   @media (max-height: 600px) {
@@ -274,9 +278,14 @@ const Card = styled.div`
   min-height: auto;
   margin-right: 4rem;
   img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     height: 20vh;
     min-height: 10rem;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 1.5rem;
   }
 
   h4 {

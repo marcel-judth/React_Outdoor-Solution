@@ -29,7 +29,7 @@ const LandingSection = () => {
 };
 
 const HomeLanding = styled.div`
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;

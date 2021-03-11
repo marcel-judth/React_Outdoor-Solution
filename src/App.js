@@ -2,6 +2,7 @@
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import CookiePopUp from './components/CookiePopUp';
 
 //styles
 import GlobalStyles from './styles/GlobalStyles';
@@ -13,9 +14,12 @@ import Products from './pages/Products';
 
 function App() {
   const location = useLocation();
+  const displayConsent = !sessionStorage.getItem('jdc_consent');
+
   return (
     <div className="App">
       <GlobalStyles />
+      {displayConsent && <CookiePopUp />}
       <Nav />
       <Switch location={location} key={location.pathname}>
         <Route path="/aboutus" exact>

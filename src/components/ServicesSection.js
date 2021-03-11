@@ -10,7 +10,6 @@ import { useScroll } from './useScroll';
 import { Colors } from '../styles/Colors';
 
 const ServicesSection = () => {
-  // const [element, controls] = useScroll(0.1);
   const [lineElement, lineControls] = useScroll(0.5);
 
   return (

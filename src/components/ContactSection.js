@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
+import lgbaulogo from '../img/lgbaulogo.png';
 
 const ContactSection = () => {
   const submitForm = (ev) => {
@@ -95,7 +96,7 @@ const ContactSection = () => {
         </div>
       </div>
 
-      <FooterSocialMediaIcons>
+      {/* <FooterSocialMediaIcons>
         <a href="https://www.google.com">
           <i class="fab fa-facebook-f"></i>
         </a>
@@ -105,7 +106,11 @@ const ContactSection = () => {
         <a href="https://www.google.com">
           <i class="fab fa-youtube"></i>
         </a>
-      </FooterSocialMediaIcons>
+
+        <a href="http://www.lgbau.com/index.html">
+          <img src={lgbaulogo} alt="LG Bau logo" />
+        </a>
+      </FooterSocialMediaIcons> */}
 
       <FooterPrivacy>
         <a href="/Terms">Impressum</a> <p>&copy; Outdoor Solution 2021</p>
@@ -239,7 +244,7 @@ const ContactContainer = styled.div`
 const Footer = styled.div`
   background: ${Colors.footerColor};
   height: 40vh;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   align-items: center;
   padding: 2.5rem 0rem;
@@ -288,28 +293,28 @@ const Footer = styled.div`
   }
 `;
 
-const FooterSocialMediaIcons = styled.div`
-  color: white;
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  padding: 0.5rem 0rem;
-  a {
-    color: white;
-    font-size: 1.8rem;
-    margin: 0rem 3rem;
-  }
-  i {
-    transition: 0.75s ease;
-    &:hover {
-      transform: scale(1.1);
-      transition: 0.75s ease;
-    }
-  }
-  @media (max-width: 800px) {
-    display: none;
-  }
-`;
+// const FooterSocialMediaIcons = styled.div`
+//   color: white;
+//   position: absolute;
+//   bottom: 0%;
+//   right: 0%;
+//   padding: 0.5rem 0rem;
+//   a {
+//     color: white;
+//     font-size: 1.8rem;
+//     margin: 0rem 3rem;
+//   }
+//   i {
+//     transition: 0.75s ease;
+//     &:hover {
+//       transform: scale(1.1);
+//       transition: 0.75s ease;
+//     }
+//   }
+//   @media (max-width: 800px) {
+//     display: none;
+//   }
+// `;
 
 const FooterPrivacy = styled.div`
   position: absolute;

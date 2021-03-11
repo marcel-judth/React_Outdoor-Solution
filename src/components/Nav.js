@@ -14,7 +14,7 @@ import { useState } from 'react';
 const Nav = () => {
   const location = useLocation();
   const [navStatus, setNavStatus] = useState(false);
-  console.log(location.pathname);
+
   return (
     <StyledNav>
       <Link to="/">
@@ -31,7 +31,7 @@ const Nav = () => {
       </Burger>
 
       <ul className={`${navStatus ? 'active' : ''}`}>
-        <li>
+        <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/">Home</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -39,7 +39,7 @@ const Nav = () => {
             animate={{ width: location.pathname === '/' ? '100%' : '0%' }}
           />
         </li>
-        <li>
+        <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/aboutus">Über uns</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -49,7 +49,7 @@ const Nav = () => {
             }}
           />
         </li>
-        <li>
+        <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/products">Produkte</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -59,7 +59,7 @@ const Nav = () => {
             }}
           />
         </li>
-        <li>
+        <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/projects">Projekte</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -69,7 +69,7 @@ const Nav = () => {
             }}
           />
         </li>
-        <li>
+        <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/#contact">Kontakt</Link>
           <Line
             transition={{ duration: 0.75 }}
@@ -86,8 +86,8 @@ const Nav = () => {
 
 const StyledNav = styled.nav`
   min-height: 10vh;
-  width: 100vw;
   max-width: 100vw;
+  width: 100%;
   display: flex;
   position: fixed;
   background: rgba(0, 0, 0, 0.66);
