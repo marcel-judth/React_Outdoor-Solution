@@ -85,7 +85,9 @@ const Nav = () => {
 };
 
 const StyledNav = styled.nav`
-  min-height: 10vh;
+  min-height: 5rem;
+  height: 10vh;
+  max-height: auto;
   max-width: 100vw;
   width: 100%;
   display: flex;
@@ -99,6 +101,7 @@ const StyledNav = styled.nav`
   z-index: 10;
   img {
     height: 5vh;
+    min-height: 2rem;
     cursor: pointer;
   }
   ul {

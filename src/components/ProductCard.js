@@ -273,7 +273,7 @@ const Card = styled.div`
   padding: 3rem 0rem;
   justify-content: space-around;
   background: white;
-  min-width: 25rem;
+  min-width: 22rem;
   height: auto;
   min-height: auto;
   margin-right: 4rem;

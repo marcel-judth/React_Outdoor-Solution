@@ -173,6 +173,7 @@ const ServicesBody = styled(motion.div)`
     background: ${Colors.primaryColor};
     /* padding: 0.7rem 0.7rem; */
     width: 3rem;
+    min-width: 3rem;
     height: 3rem;
     display: flex;
     align-items: center;
@@ -189,7 +190,7 @@ const ServicesBody = styled(motion.div)`
   @media (max-width: 800px) {
     .question {
       width: 30rem;
-      max-width: 80%;
+      max-width: 90%;
     }
     .line {
       max-width: 70%;
@@ -206,6 +207,18 @@ const ServicesBody = styled(motion.div)`
       margin-left: 2rem;
     }
   }
+
+  @media (max-width: 500px) {
+    padding-left: 1.5rem;
+
+    .line {
+      max-width: 90%;
+    }
+
+    .answer {
+      margin-left: 1rem;
+    }
+  }
 `;
 
 const ServicesContainer = styled.div`
@@ -219,7 +232,7 @@ const ToggleContainer = styled.div`
   display: flex;
   align-items: center;
   margin-right: auto;
-  max-height: 60vh;
+  max-height: auto;
 `;
 
 export default ServicesSection;

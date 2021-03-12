@@ -47,6 +47,7 @@ const Modal = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  max-width: 100vw;
   pointer-events: none;
   opacity: 0;
   transition: all 0.25s ease-out;
@@ -62,7 +63,9 @@ const Modal = styled.div`
   }
   img {
     position: absolute;
-    height: 70%;
+    max-width: 100%;
+    height: auto;
+    max-height: 70%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.5);

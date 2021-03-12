@@ -243,7 +243,8 @@ const ContactContainer = styled.div`
 
 const Footer = styled.div`
   background: ${Colors.footerColor};
-  height: 40vh;
+  min-height: 40vh;
+  max-height: auto;
   max-width: 100vw;
   display: flex;
   align-items: center;

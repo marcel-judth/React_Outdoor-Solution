@@ -34,7 +34,7 @@ const HomeLanding = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #cccccc;
-  background: url(${landingImage}) no-repeat center center fixed;
+  background: url(${landingImage}) no-repeat top center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

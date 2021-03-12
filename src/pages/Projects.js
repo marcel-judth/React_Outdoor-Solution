@@ -32,6 +32,11 @@ const ProjectsWrapper = styled.div`
       font-weight: bold;
     }
   }
+
+  @media (max-width: 500px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 `;
 
 export default Projects;

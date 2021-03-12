@@ -25,7 +25,7 @@ function CookiePopUp() {
 
 const PopUp = styled.div`
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0%;
   left: 0%;
   min-height: 10vh;

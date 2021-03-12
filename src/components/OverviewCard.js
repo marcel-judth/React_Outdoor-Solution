@@ -22,7 +22,7 @@ const Card = styled.div`
   width: 20vw;
   min-width: 20rem;
   height: 65vh;
-  min-height: 20rem;
+  min-height: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +59,7 @@ const Card = styled.div`
     margin-bottom: 2rem;
     border: none;
     background: ${Colors.primaryColor};
-    padding: 0.8rem 4rem;
+    padding: 0.7rem 4rem;
     transition: 0.75s ease;
     border-radius: 0.2rem;
     cursor: pointer;
