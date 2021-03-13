@@ -19,7 +19,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
   };
 
   const openCallback = () => {
-    openBuy();
+    setbuyOpen(false);
     setcallOpen(!callOpen);
   };
 
@@ -64,7 +64,12 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
         <img src={image} alt="product image" />
         <h3>{title}</h3>
         <p>{infoText}</p>
-        <button className="buy-btn" onClick={openModal}>
+        <button
+          type="button"
+          type="button"
+          className="buy-btn"
+          onClick={openModal}
+        >
           Schließen
         </button>
       </ProductDetails>
@@ -164,7 +169,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
         </form>
 
         <div className="buy-buttons">
-          <button className="buy-close-btn" onClick={openBuy}>
+          <button type="button" className="buy-close-btn" onClick={openBuy}>
             Schließen
           </button>
           <button className="buy-call-btn" onClick={openCallback}>
@@ -198,9 +203,18 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           <button className="buy-btn" type="submit">
             Rückruf fordern
           </button>
+          <button
+            type="button"
+            className="buy-close-btn"
+            onClick={openCallback}
+          >
+            Schließen
+          </button>
         </form>
       </CallModal>
-      <BlurryBackground className={infoOpen || buyOpen ? 'active' : ''} />
+      <BlurryBackground
+        className={infoOpen || buyOpen || callOpen ? 'active' : ''}
+      />
     </Card>
   );
 };
@@ -350,6 +364,25 @@ const CallModal = styled.div`
     width: 70%;
   }
 
+  .buy-close-btn {
+    background: none;
+    width: 100%;
+    margin-right: 1rem;
+    padding: 0.3rem 1.5rem;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s ease;
+    }
+  }
+
+  .buy-close-btn {
+    border: 0.2rem solid #7e4a4a;
+    color: #7e4a4a;
+  }
+
   .input-wrapper {
     display: flex;
     flex-direction: column;
@@ -451,6 +484,7 @@ const Card = styled.div`
     text-decoration: underline;
     opacity: 0.7;
     font-size: 1rem;
+    color: ${Colors.textColor};
     cursor: pointer;
 
     &:hover {
