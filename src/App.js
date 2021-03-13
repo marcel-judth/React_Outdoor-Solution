@@ -12,6 +12,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
 import Products from './pages/Products';
 import Terms from './pages/Terms';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const location = useLocation();

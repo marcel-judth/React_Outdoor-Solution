@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { lineAnimAboutUs } from '../Animation';
 import { useScroll } from '../components/useScroll';
 import { Colors } from '../styles/Colors';
+import ScrollTop from '../components/ScrollTop';
 
 function Terms() {
   const [lineElement, lineControls] = useScroll(0.1);
@@ -36,6 +37,7 @@ function Terms() {
       <p>
         <span>Tel: </span>0660 739 81 00
       </p>
+      <ScrollTop />
     </TermsSection>
   );
 }

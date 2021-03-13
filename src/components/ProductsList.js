@@ -19,6 +19,7 @@ const ProductsList = ({ ProductsData }) => {
             price={card.price}
             infoText={card.infoText}
             options={card.options}
+            link={card.link}
             key={index}
           />
         );

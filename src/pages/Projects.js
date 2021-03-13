@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProjectsGrid from '../components/ProjectsGrid';
+import ScrollTop from '../components/ScrollTop';
 
 function Projects() {
   return (
@@ -14,6 +15,7 @@ function Projects() {
         nächstes Projekt mit Outdoor Solution inspirieren.
       </p>
       <ProjectsGrid />
+      <ScrollTop />
     </ProjectsWrapper>
   );
 }

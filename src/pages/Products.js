@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ProductsList from '../components/ProductsList';
 import { Colors } from '../styles/Colors';
 import { ProductsData } from '../components/ProductsData';
+import ScrollTop from '../components/ScrollTop';
 
 function Products() {
   const filters = [...new Set(ProductsData.map((item) => item.category))];
@@ -27,6 +28,7 @@ function Products() {
         </select>
       </ProductsHeader>
       <ProductsList ProductsData={products} />
+      <ScrollTop />
     </ProductsSection>
   );
 }

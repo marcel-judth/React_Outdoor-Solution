@@ -5,6 +5,7 @@ import { useScroll } from '../components/useScroll';
 import AboutUsImage from '../img/about-us-image.jpg';
 import { fade, lineAnimAboutUs } from '../Animation';
 import { Colors } from '../styles/Colors';
+import ScrollTop from '../components/ScrollTop';
 
 function AboutUs() {
   return (
@@ -52,6 +53,7 @@ function AboutUs() {
           Oase der Entspannung.
         </p>
       </AboutUsText>
+      <ScrollTop />
     </AboutUsSection>
   );
 }

@@ -3,6 +3,7 @@ import ContactSection from '../components/ContactSection';
 import LandingSection from '../components/LandingSection';
 import OverviewSection from '../components/OverviewSection';
 import ServicesSection from '../components/ServicesSection';
+import ScrollTop from '../components/ScrollTop';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <ServicesSection id="services" />
       <OverviewSection />
       <ContactSection id="contact" />
+      <ScrollTop />
     </div>
   );
 };

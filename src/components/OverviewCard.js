@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 
@@ -8,9 +9,9 @@ const OverviewCard = ({ image, title, text, link }) => {
       <div className="card-line"></div>
       <h3>{title}</h3>
       <p>{text}</p>
-      <button>
-        <a href={link}>mehr</a>
-      </button>
+      <Link to={link} className="more-btn">
+        mehr
+      </Link>
     </Card>
   );
 };
@@ -55,7 +56,7 @@ const Card = styled.div`
     text-align: justify;
     margin-bottom: 3vh;
   }
-  button {
+  .more-btn {
     margin-bottom: 2rem;
     border: none;
     background: ${Colors.primaryColor};
