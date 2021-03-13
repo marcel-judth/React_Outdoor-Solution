@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Toggle from './Toggle';
 import { AnimateSharedLayout } from 'framer-motion';
 import ImageSlider from './ImageSlider';
-import { GiFruitTree, GiSeedling, GiPencilRuler } from 'react-icons/gi';
 import { SliderData } from './SliderData';
 import { motion } from 'framer-motion';
 import { lineAnim } from '../Animation';

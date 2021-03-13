@@ -2,17 +2,25 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 import { fade } from '../Animation';
+import ReactDatePicker from 'react-datepicker';
+import CustomDatePicker from './CustomDatePicker';
 
 const ProductCard = ({ image, title, price, infoText, options, link }) => {
   const [infoOpen, setInfoOpen] = useState(false);
   const [buyOpen, setbuyOpen] = useState(false);
-
+  const [callOpen, setcallOpen] = useState(false);
+  const [date, setDate] = useState(null);
   const openModal = () => {
     setInfoOpen(!infoOpen);
   };
 
   const openBuy = () => {
     setbuyOpen(!buyOpen);
+  };
+
+  const openCallback = () => {
+    openBuy();
+    setcallOpen(!callOpen);
   };
 
   const submitForm = (ev) => {
@@ -32,7 +40,8 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
       }
     };
     xhr.send(data);
-    openBuy();
+    setbuyOpen(false);
+    setcallOpen(false);
   };
 
   return (
@@ -45,9 +54,10 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
         {options.map((option) => {
           return <option value={option}>{option}</option>;
         })}
-        <option value="5liter">5 Liter</option>
       </select>
-      <button onClick={openBuy}>Bestellen</button>
+      <button className="buy-btn" onClick={openBuy}>
+        Bestellen
+      </button>
       <ProductDetails className={'details-modal ' + (infoOpen ? 'active' : '')}>
         <img src={image} alt="product image" />
         <h3>{title}</h3>
@@ -62,6 +72,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           action="https://formspree.io/f/mzbklnpk"
           method="POST"
         >
+          <input type="hidden" name="Typ" value="Neue Reservierung" />
           <div className="input-wrapper">
             <label>Name</label>
 
@@ -78,7 +89,6 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           </div>
           <div className="input-wrapper">
             <label>Telefonnummer</label>
-
             <input
               id="txtContact"
               name="Kontakt"
@@ -109,27 +119,83 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
             <label>Menge</label>
 
             <select name="Menge" id="buy-amount">
-              <option value="5liter">5 Liter</option>
-              <option value="5liter">8 Liter</option>
+              {options.map((option) => {
+                return <option value={option}>{option}</option>;
+              })}
+              ;
             </select>
           </div>
           <div className="input-wrapper">
-            <label>Uhrzeit Abholung</label>
-            <input type="datetime-local" name="Abholdatum" required />
+            <label>Stück</label>
+
+            <input
+              id="txtContact"
+              name="Stück"
+              type="number"
+              placeholder="Stück"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+              required
+            />
           </div>
-          <button type="submit">Bestellen</button>
+          <div className="input-wrapper">
+            <label>Uhrzeit Abholung</label>
+
+            <div className="time-wrapper">
+              <CustomDatePicker date={date} setDate={setDate} />
+              <input type="hidden" name="Datum" value={date} />
+              <select name="Uhrzeit" id="buy-amount">
+                <option value="08:00">08:00</option>
+                <option value="08:00">08:30</option>
+                <option value="09:00">09:00</option>
+                <option value="09:00">09:30</option>
+                <option value="10:00">10:00</option>
+              </select>
+            </div>
+          </div>
+          <button className="buy-btn" type="submit">
+            Bestellen
+          </button>
         </form>
 
         <div className="buy-buttons">
           <button className="buy-close-btn" onClick={openBuy}>
             Schließen
           </button>
-          <button className="buy-call-btn" onClick={openBuy}>
+          <button className="buy-call-btn" onClick={openCallback}>
             Rückruf
           </button>
         </div>
       </BuyProduct>
 
+      <CallModal className={'call-modal ' + (callOpen ? 'active' : '')}>
+        <h3>Rückruf anfordern</h3>
+        <form
+          onSubmit={submitForm}
+          action="https://formspree.io/f/mzbklnpk"
+          method="POST"
+        >
+          <input type="hidden" name="Typ" value="Rueckruf" />
+          <div className="input-wrapper">
+            <label>Telefonnummer</label>
+            <input
+              id="txtContact"
+              name="Kontakt"
+              type="tel"
+              placeholder="Tel."
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+              required
+            />
+          </div>
+
+          <button className="buy-btn" type="submit">
+            Rückruf fordern
+          </button>
+        </form>
+      </CallModal>
       <BlurryBackground className={infoOpen || buyOpen ? 'active' : ''} />
     </Card>
   );
@@ -155,7 +221,7 @@ const BuyProduct = styled.div`
   flex-direction: column;
   padding: 2rem 2rem;
   transition: all 0.5s ease-in-out;
-  z-index: 1;
+  z-index: 6;
   opacity: 0;
   pointer-events: none;
 
@@ -197,19 +263,104 @@ const BuyProduct = styled.div`
     }
   }
 
-  .buy-close-btn {
+  .react-datepicker-wrapper {
+    width: 70%;
+
+    input {
+      width: 70%;
+    }
+  }
+
+  .time-wrapper {
+    display: flex;
+  }
+
+  .buy-close-btn,
+  .buy-call-btn {
     background: none;
-    border: 0.2rem solid #7e4a4a;
-    color: #7e4a4a;
+
     margin-right: 1rem;
     padding: 0.3rem 1.5rem;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.5s ease;
+    }
+  }
+
+  .buy-close-btn {
+    border: 0.2rem solid #7e4a4a;
+    color: #7e4a4a;
   }
 
   .buy-call-btn {
     background: none;
     border: 0.2rem solid ${Colors.primaryColor};
     color: ${Colors.primaryColor};
-    padding: 0.2rem 1.5rem;
+  }
+
+  @media (max-height: 600px) {
+    transform: translate(-50%, 0%);
+  }
+`;
+
+const CallModal = styled.div`
+  -webkit-box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 30rem;
+  height: 80%;
+  min-height: 20rem;
+  max-height: 20rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 2rem 2rem;
+  transition: all 0.5s ease-in-out;
+  z-index: 6;
+  opacity: 0;
+  pointer-events: none;
+
+  h3 {
+    font-size: 2rem !important;
+    font-weight: 500;
+  }
+  p {
+    text-align: justify;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 70%;
+  }
+
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 0.8rem;
+      margin-bottom: 0.2rem;
+    }
+
+    input {
+      border: none;
+      border: 0.1rem solid ${Colors.primaryColor};
+      padding: 0.5rem 0.8rem;
+      font-size: 1rem;
+      font-family: 'Montserrat', sans-serif;
+    }
   }
 
   @media (max-height: 600px) {
@@ -221,7 +372,7 @@ const BlurryBackground = styled.div`
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 0.9;
+  z-index: 5;
   backdrop-filter: blur(2px);
   pointer-events: none;
   opacity: 0;
@@ -249,7 +400,7 @@ const ProductDetails = styled.div`
   flex-direction: column;
   padding: 1rem 2rem;
   transition: all 0.5s ease-in-out;
-  z-index: 1;
+  z-index: 6;
   opacity: 0;
   pointer-events: none;
 
@@ -303,7 +454,7 @@ const Card = styled.div`
     }
   }
 
-  button {
+  .buy-btn {
     border: none;
     background: ${Colors.primaryColor};
     color: white;

@@ -11,6 +11,7 @@ import GlobalStyles from './styles/GlobalStyles';
 import { Switch, Route, useLocation } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
 import Products from './pages/Products';
+import Terms from './pages/Terms';
 
 function App() {
   const location = useLocation();
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/projects" exact>
           <Projects />
+        </Route>
+        <Route path="/terms">
+          <Terms />
         </Route>
         <Route path="/">
           <Home />

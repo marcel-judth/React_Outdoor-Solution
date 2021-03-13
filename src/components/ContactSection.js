@@ -34,6 +34,7 @@ const ContactSection = () => {
             method="POST"
           >
             <h3>Schreiben Sie uns</h3>
+            <input type="hidden" name="Typ" value="Neue Reservierung" />
             <input
               id="txtName"
               placeholder="Name"
