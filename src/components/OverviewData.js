@@ -8,28 +8,28 @@ export const OverviewData = [
     image: aboutUsImage,
     title: 'Über uns',
     text:
-      'Outdoor Solution ist ein Garten- und Landschaftsbauunternehmen in Villach. Lesen Sie hier mehr über unser Unternehmen.',
+      'Outdoor Solution ist ein leidenschaftliches Garten- und Landschaftsbauunternehmen in Villach. Wir planen & gestalten Gärnten mit Expertise.',
     link: '/aboutus',
   },
   {
     image: productsImage,
     title: 'Produkte',
     text:
-      'Schauen Sie sich unseren Produktkatalog an. Wir vertreten mit Stolz unsere BIO-Produkte. Überzeugen Sie sich selbst.',
+      'Unsere Produktpalette umfasst ein breites Spektrum an Bio-Produkten. Schnell & einfach über unseren Online-Shop zu bestellen.',
     link: '/products',
   },
   {
     image: projectsImage,
     title: 'Projekte',
     text:
-      'Unsere Projekte gestalten wir mit Leidenschaft. Wir planen jedes Projekt individuell mit unseren Kunden. ',
+      'Unsere Projekte gestalten wir mit Leidenschaft. Individuell auf unsere Kunden angepasst. Hier gelangen Sie zu einer Übersicht bereits realisierter Lösungen.',
     link: '/projects',
   },
   {
     image: contactImage,
     title: 'Kontakt',
     text:
-      'Lassen Sie uns Ihren Wunsch wissen. Wir setzen Ihren Wunsch mit Freude um. Rufen Sie uns gerne an!',
+      'Nehmen Sie gerne Kontakt mit uns auf, damit wir Ihre Ideen umsetzen können. Wir freuen uns auf Ihren Anruf oder Ihre Nachricht. ',
     link: '#contact',
   },
 ];

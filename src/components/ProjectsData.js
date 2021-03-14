@@ -66,27 +66,27 @@ export const ProjectsData = [
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Weinrundgang',
     image: img8,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Terasse',
     image: img9,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Teich',
     image: img10,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img13,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img12,
     altText: 'Gartengestaltung Bild',
   },
@@ -96,17 +96,17 @@ export const ProjectsData = [
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img14,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img15,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img16,
     altText: 'Gartengestaltung Bild',
   },
@@ -116,54 +116,54 @@ export const ProjectsData = [
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img18,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img17,
     altText: 'Gartengestaltung Bild',
   },
 
   {
-    text: 'Gartengestaltung',
+    text: 'Weinrundgang',
     image: img20,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Baumschnitt',
     image: img21,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Baumschnitt',
     image: img22,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Baumschnitt',
     image: img23,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Pflanze',
     image: img24,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Absturzsicherung',
     image: img26,
     altText: 'Gartengestaltung Bild',
   },
   {
-    text: 'Gartengestaltung',
+    text: 'Landskron',
     image: img25,
     altText: 'Gartengestaltung Bild',
   },
 
   {
-    text: 'Gartengestaltung',
+    text: 'Steinmauer',
     image: img27,
     altText: 'Gartengestaltung Bild',
   },

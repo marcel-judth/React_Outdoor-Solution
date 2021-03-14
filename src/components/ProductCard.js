@@ -282,10 +282,8 @@ const BuyProduct = styled.div`
   }
 
   .react-datepicker-wrapper {
-    width: 70%;
-
     input {
-      width: 70%;
+      width: 90%;
     }
   }
 
@@ -323,9 +321,20 @@ const BuyProduct = styled.div`
     color: ${Colors.primaryColor};
   }
 
-  /* @media (max-height: 600px) {
+  @media (max-width: 600px) {
     transform: translate(-50%, 0%);
-  } */
+
+    .buy-buttons {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        margin-bottom: 0.5rem;
+        width: 100%;
+      }
+    }
+  }
 `;
 
 const CallModal = styled.div`
@@ -402,10 +411,6 @@ const CallModal = styled.div`
       font-size: 1rem;
       font-family: 'Montserrat', sans-serif;
     }
-  }
-
-  @media (max-height: 600px) {
-    transform: translate(-50%, 0%);
   }
 `;
 

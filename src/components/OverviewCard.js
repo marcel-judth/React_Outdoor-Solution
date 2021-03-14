@@ -53,7 +53,7 @@ const Card = styled.div`
 
   p {
     padding: 0rem 2rem;
-    text-align: justify;
+    text-align: left;
     margin-bottom: 3vh;
   }
   .more-btn {
