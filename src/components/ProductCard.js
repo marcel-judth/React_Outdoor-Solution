@@ -225,8 +225,8 @@ const BuyProduct = styled.div`
   box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 15vh;
+  transform: translate(-50%, 0%);
   width: 90%;
   max-width: 30rem;
   height: 80%;
@@ -293,12 +293,16 @@ const BuyProduct = styled.div`
     display: flex;
   }
 
+  .buy-buttons {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .buy-close-btn,
   .buy-call-btn {
     background: none;
-
-    margin-right: 1rem;
-    padding: 0.3rem 1.5rem;
+    padding: 0.3rem 1.2rem;
     font-size: 1.2rem;
     transition: 0.5s ease;
     cursor: pointer;
@@ -319,9 +323,9 @@ const BuyProduct = styled.div`
     color: ${Colors.primaryColor};
   }
 
-  @media (max-height: 600px) {
+  /* @media (max-height: 600px) {
     transform: translate(-50%, 0%);
-  }
+  } */
 `;
 
 const CallModal = styled.div`
@@ -330,8 +334,8 @@ const CallModal = styled.div`
   box-shadow: 10px 10px 44px -16px rgba(0, 0, 0, 0.75);
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 15vh;
+  transform: translate(-50%, 0%);
   width: 90%;
   max-width: 30rem;
   height: 80%;

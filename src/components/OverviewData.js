@@ -8,7 +8,7 @@ export const OverviewData = [
     image: aboutUsImage,
     title: 'Über uns',
     text:
-      'Outdoor Solution ist ein Garten- und Landschaftsbauunternehmen in Villach. Lesen Sie gerne mehr über unser Unternehmen.',
+      'Outdoor Solution ist ein Garten- und Landschaftsbauunternehmen in Villach. Lesen Sie hier mehr über unser Unternehmen.',
     link: '/aboutus',
   },
   {

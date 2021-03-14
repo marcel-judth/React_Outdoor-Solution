@@ -47,24 +47,26 @@ const ImageSliderSection = styled.div`
   }
   .right-arrow {
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: -6%;
     font-size: 8rem;
     cursor: pointer;
     user-select: none;
     z-index: 10;
     color: #e2d8d8;
+    transform: translateY(-50%);
   }
 
   .left-arrow {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: -6%;
     font-size: 8rem;
     cursor: pointer;
     user-select: none;
     z-index: 10;
     color: #e2d8d8;
+    transform: translateY(-50%);
   }
 
   .slider {

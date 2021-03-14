@@ -23,7 +23,7 @@ const Card = styled.div`
   width: 20vw;
   min-width: 20rem;
   height: 65vh;
-  min-height: 25rem;
+  min-height: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
