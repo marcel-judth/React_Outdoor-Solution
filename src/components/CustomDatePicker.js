@@ -8,7 +8,7 @@ const CustomDatePicker = ({ date, setDate }) => {
   const isWeekday = (date) => {
     const today = new Date();
     const day = date.getDay();
-    return day !== 0 && day !== 6 && today < date;
+    return day !== 0 && day !== 6 && today < date + 1;
   };
 
   return (

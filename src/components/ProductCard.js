@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
-import { fade } from '../Animation';
-import ReactDatePicker from 'react-datepicker';
 import CustomDatePicker from './CustomDatePicker';
 
 const ProductCard = ({ image, title, price, infoText, options, link }) => {
@@ -57,9 +55,8 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           return <option value={option}>{option}</option>;
         })}
       </select>
-      <button className="buy-btn" onClick={openBuy}>
-        Bestellen
-      </button>
+      <button className="disabled-btn">Bald verfügbar</button>
+
       <ProductDetails className={'details-modal ' + (infoOpen ? 'active' : '')}>
         <img src={image} alt="product image" />
         <h3>{title}</h3>
@@ -141,6 +138,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
               id="txtContact"
               name="Stück"
               type="number"
+              min="0"
               placeholder="Stück"
               onKeyPress={(e) => {
                 e.key === 'Enter' && e.preventDefault();
@@ -160,6 +158,13 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
                 <option value="09:00">09:00</option>
                 <option value="09:00">09:30</option>
                 <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
               </select>
             </div>
           </div>
@@ -513,6 +518,17 @@ const Card = styled.div`
       transform: scale(1.1);
       transition: 0.5s ease;
     }
+  }
+
+  .disabled-btn {
+    border: none;
+    border: 0.1rem solid grey;
+    background: unset;
+    color: grey;
+    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    transition: 0.5s ease;
+    cursor: pointer;
   }
 
   .active {

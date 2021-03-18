@@ -17,7 +17,7 @@ export const lineAnim = {
 
 export const lineAnimAboutUs = {
   hidden: { width: '0%' },
-  show: { width: '100%', transition: { delay: 1, duration: 1 } },
+  show: { width: '90%', transition: { delay: 1, duration: 1 } },
 };
 
 export const fade = {

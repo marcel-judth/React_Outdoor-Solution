@@ -50,6 +50,7 @@ const OvervieCardsWrapper = styled.div`
   padding: 1rem 5rem 5rem 5rem;
   @media (max-width: 1000px) {
     padding: 0.5rem 2rem 2rem 2rem;
+    overflow-x: scroll;
   }
 `;
 

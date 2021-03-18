@@ -1,80 +1,13 @@
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 import lgbaulogo from '../img/lgbaulogo.png';
+import ContactForm from './ContactForm';
 
 const ContactSection = () => {
-  const submitForm = (ev) => {
-    ev.preventDefault();
-    const form = ev.target;
-    const data = new FormData(form);
-    const xhr = new XMLHttpRequest();
-    xhr.open(form.method, form.action);
-    xhr.setRequestHeader('Accept', 'application/json');
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset();
-        console.log('SUCCESS');
-      } else {
-        console.log('ERROR', xhr);
-      }
-    };
-    xhr.send(data);
-  };
-
   return (
     <ContactSect id="contact">
       <div className="contact-text">
         <h2>Kontakt</h2>
-
-        <ContactContainer>
-          <form
-            onSubmit={submitForm}
-            action="https://formspree.io/f/mzbklnpk"
-            method="POST"
-          >
-            <h3>Schreiben Sie uns</h3>
-            <input type="hidden" name="Typ" value="Neue Reservierung" />
-            <input
-              id="txtName"
-              placeholder="Name"
-              type="text"
-              name="Name"
-              onKeyPress={(e) => {
-                e.key === 'Enter' && e.preventDefault();
-              }}
-              required
-            />
-            <input
-              id="txtContact"
-              name="Kontakt"
-              type="text"
-              placeholder="Tel. oder Email"
-              onKeyPress={(e) => {
-                e.key === 'Enter' && e.preventDefault();
-              }}
-              required
-            />
-            <input
-              id="txtPLZ"
-              name="PLZ"
-              type="text"
-              placeholder="PLZ"
-              onKeyPress={(e) => {
-                e.key === 'Enter' && e.preventDefault();
-              }}
-            />
-            <textarea
-              id="txtMessage"
-              name="Nachricht"
-              placeholder="Nachricht"
-              onKeyPress={(e) => {
-                e.key === 'Enter' && e.preventDefault();
-              }}
-            />
-            <button type="submit">Senden</button>
-          </form>
-        </ContactContainer>
 
         <p className="contactInfoText">
           Wir sind für Sie da und freuen uns auf Ihren Anruf!
@@ -92,10 +25,14 @@ const ContactSection = () => {
           </div>
           <div className="info">
             <i class="fas fa-map-marker-alt"></i>
-            <a href="">Villach, AT</a>
+            <a href="https://goo.gl/maps/ftXdCLQSvUAHjcXeA" target="_blank">
+              Villach, AT
+            </a>
           </div>
         </div>
       </div>
+
+      <ContactForm />
 
       {/* <FooterSocialMediaIcons>
         <a href="https://www.google.com">
@@ -128,8 +65,16 @@ const ContactSection = () => {
           <p>Millstätter Straße 52</p>
           <p>9523 Villach, AT</p>
           <br />
-          <p>Mo-Do 08:00-17:00 | Fr 08:00-12:00</p>
-          <a href="tel:+436607398446">+43 660 739 84 46</a>
+          <p>Mo-Fr 08:00-17:00</p>
+          <div className="footer-contact">
+            <label>Büro:</label>
+            <a href="tel:+436607398100">+43 660 739 81 00</a>
+          </div>
+          <div className="footer-contact">
+            <label>Mobil:</label>
+            <a href="tel:+436607398446">+43 660 739 84 46</a>
+          </div>
+
           <a href="mailto:office@outdoorsolution.at">
             office@outdoorsolution.at
           </a>
@@ -185,63 +130,6 @@ const ContactSect = styled.div`
   }
 `;
 
-const ContactContainer = styled.div`
-  form {
-    -webkit-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
-    -moz-box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
-    box-shadow: 10px 10px 37px -16px rgba(0, 0, 0, 0.82);
-    position: absolute;
-    right: 10%;
-    top: 25%;
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 25%;
-    min-width: 25rem;
-    min-height: 20rem;
-    height: 50%;
-    input {
-      border: none;
-      border: 0.1rem solid ${Colors.primaryColor};
-      height: 2rem;
-      width: 70%;
-      padding: 0rem 1rem;
-    }
-
-    textarea {
-      width: 70%;
-      height: 20%;
-      font-family: 'montserrat', sans-serif;
-      padding: 0.5rem 1rem;
-      border: none;
-      border: 0.1rem solid ${Colors.primaryColor};
-    }
-
-    button {
-      border: none;
-      background: ${Colors.primaryColor};
-      padding: 0.7rem 0rem;
-      width: 70%;
-      color: white;
-      cursor: pointer;
-      transition: 1s ease;
-      &:hover {
-        transform: scale(1.1);
-        transition: 1s ease;
-      }
-    }
-
-    @media (max-width: 1150px) {
-      right: 3%;
-    }
-    @media (max-width: 800px) {
-      display: none;
-    }
-  }
-`;
-
 const Footer = styled.div`
   background: ${Colors.footerColor};
   min-height: 40vh;
@@ -266,6 +154,13 @@ const Footer = styled.div`
       text-decoration: underline;
     }
   }
+  label {
+    display: block;
+    font-size: 1rem;
+    color: white;
+    font-weight: 300;
+    margin: 0.2rem;
+  }
   p {
     color: white;
     font-size: 1rem;
@@ -278,6 +173,10 @@ const Footer = styled.div`
     margin-right: 3rem;
     height: 35vh;
     width: 35vh;
+  }
+
+  .footer-contact {
+    display: flex;
   }
 
   @media (max-width: 1100px) {
@@ -294,29 +193,6 @@ const Footer = styled.div`
     }
   }
 `;
-
-// const FooterSocialMediaIcons = styled.div`
-//   color: white;
-//   position: absolute;
-//   bottom: 0%;
-//   right: 0%;
-//   padding: 0.5rem 0rem;
-//   a {
-//     color: white;
-//     font-size: 1.8rem;
-//     margin: 0rem 3rem;
-//   }
-//   i {
-//     transition: 0.75s ease;
-//     &:hover {
-//       transform: scale(1.1);
-//       transition: 0.75s ease;
-//     }
-//   }
-//   @media (max-width: 800px) {
-//     display: none;
-//   }
-// `;
 
 const FooterPrivacy = styled.div`
   position: absolute;

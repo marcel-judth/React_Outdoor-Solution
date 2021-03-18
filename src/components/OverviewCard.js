@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 
@@ -53,7 +53,7 @@ const Card = styled.div`
 
   p {
     padding: 0rem 2rem;
-    text-align: left;
+    text-align: center;
     margin-bottom: 3vh;
   }
   .more-btn {

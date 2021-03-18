@@ -7,9 +7,17 @@ import { motion } from 'framer-motion';
 import { lineAnim } from '../Animation';
 import { useScroll } from './useScroll';
 import { Colors } from '../styles/Colors';
+import { useState } from 'react';
 
 const ServicesSection = () => {
   const [lineElement, lineControls] = useScroll(0.5);
+  const [toggleStates, setToggleStates] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
   return (
     <ServicesBody>
@@ -25,7 +33,13 @@ const ServicesSection = () => {
         <div className="services">
           <AnimateSharedLayout>
             <ToggleContainer>
-              <Toggle title="Planung von Gärten" iconName="fas fa-pencil-ruler">
+              <Toggle
+                title="Planung von Gärten"
+                iconName="fas fa-pencil-ruler"
+                toggleStates={toggleStates}
+                setToggleStates={setToggleStates}
+                index={0}
+              >
                 <div className="answer">
                   <p>
                     Sie wünschen sich einen<span> Traumgarten?</span> <br />
@@ -39,7 +53,13 @@ const ServicesSection = () => {
               </Toggle>
             </ToggleContainer>
             <ToggleContainer>
-              <Toggle title="Gestaltung von Gärten" iconName="fas fa-seedling">
+              <Toggle
+                title="Gestaltung von Gärten"
+                iconName="fas fa-seedling"
+                toggleStates={toggleStates}
+                setToggleStates={setToggleStates}
+                index={1}
+              >
                 <div className="answer">
                   <p>
                     Outdoor Solution kümmert sich um die Gestaltung und
@@ -54,7 +74,13 @@ const ServicesSection = () => {
               </Toggle>
             </ToggleContainer>
             <ToggleContainer>
-              <Toggle title="Baumschnitt" iconName="fas fa-tree">
+              <Toggle
+                title="Baumschnitt"
+                iconName="fas fa-tree"
+                toggleStates={toggleStates}
+                setToggleStates={setToggleStates}
+                index={2}
+              >
                 <div className="answer">
                   <p>
                     Wir kümmern uns um die
@@ -67,7 +93,13 @@ const ServicesSection = () => {
               </Toggle>
             </ToggleContainer>
             <ToggleContainer>
-              <Toggle title="Gartenpflege" iconName="fas fa-hand-holding-water">
+              <Toggle
+                title="Gartenpflege"
+                iconName="fas fa-hand-holding-water"
+                toggleStates={toggleStates}
+                setToggleStates={setToggleStates}
+                index={3}
+              >
                 <div className="answer">
                   <p>
                     Outdoor Solution verfügt über die nötige Expertise, um die
@@ -80,7 +112,13 @@ const ServicesSection = () => {
               </Toggle>
             </ToggleContainer>
             <ToggleContainer>
-              <Toggle title="Teich- und Poolbau" iconName="fas fa-water">
+              <Toggle
+                title="Teich- und Poolbau"
+                iconName="fas fa-water"
+                toggleStates={toggleStates}
+                setToggleStates={setToggleStates}
+                index={4}
+              >
                 <div className="answer">
                   <p>
                     Wie wäre es mit einem eigenen ökologischen Schwimmteich in

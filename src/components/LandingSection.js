@@ -34,16 +34,13 @@ const HomeLanding = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #cccccc;
-  background: url(${landingImage}) no-repeat top center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background: url(${landingImage}) no-repeat left center fixed;
   background-size: cover;
-  img {
+  /* img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+  } */
 `;
 
 const HomeLandingText = styled(motion.div)`
