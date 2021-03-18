@@ -41,8 +41,16 @@ const HomeLanding = styled.div`
     height: 100%;
     object-fit: cover;
   } */
-  @media (max-width: 800px) {
-    background-size: auto;
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    height: 100%;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed !important;
+
+    background-position: center !important;
+
+    background-size: cover !important;
   }
 `;
 
@@ -60,7 +68,7 @@ const HomeLandingText = styled(motion.div)`
   background: rgba(0, 0, 0, 0.8);
   img {
     position: relative;
-    max-width: 20rem;
+    max-width: 15rem;
     height: auto;
     margin-bottom: 2rem;
   }
