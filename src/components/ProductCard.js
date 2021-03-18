@@ -7,7 +7,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
   const [infoOpen, setInfoOpen] = useState(false);
   const [buyOpen, setbuyOpen] = useState(false);
   const [callOpen, setcallOpen] = useState(false);
-  const [date, setDate] = useState(null);
+  const [date, setDate] = useState(undefined);
   const openModal = () => {
     // setInfoOpen(!infoOpen);
   };
@@ -50,9 +50,13 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
       <a href={link} target="_blank">
         mehr Infos
       </a>
-      <select name="" id="">
-        {options.map((option) => {
-          return <option value={option}>{option}</option>;
+      <select>
+        {options.map((option, index) => {
+          return (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          );
         })}
       </select>
       <button className="disabled-btn">Bald verfügbar</button>
@@ -83,7 +87,6 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
             <label>Name</label>
 
             <input
-              id="txtName"
               placeholder="Name"
               type="text"
               name="Name"
@@ -96,7 +99,6 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           <div className="input-wrapper">
             <label>Telefonnummer</label>
             <input
-              id="txtContact"
               name="Kontakt"
               type="tel"
               placeholder="Tel."
@@ -110,7 +112,6 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
             <label>Email (für die Bestätigung)</label>
 
             <input
-              id="txtName"
               placeholder="Email"
               type="email"
               name="Email"
@@ -124,9 +125,13 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           <div className="input-wrapper">
             <label>Menge</label>
 
-            <select name="Menge" id="buy-amount">
-              {options.map((option) => {
-                return <option value={option}>{option}</option>;
+            <select name="Menge">
+              {options.map((option, index) => {
+                return (
+                  <option key={index} value={option}>
+                    {option}
+                  </option>
+                );
               })}
               ;
             </select>
@@ -135,7 +140,6 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
             <label>Stück</label>
 
             <input
-              id="txtContact"
               name="Stück"
               type="number"
               min="0"
@@ -152,7 +156,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
             <div className="time-wrapper">
               <CustomDatePicker date={date} setDate={setDate} />
               <input type="hidden" name="Datum" value={date} />
-              <select name="Uhrzeit" id="buy-amount">
+              <select name="Uhrzeit">
                 <option value="08:00">08:00</option>
                 <option value="08:00">08:30</option>
                 <option value="09:00">09:00</option>
@@ -194,7 +198,6 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
           <div className="input-wrapper">
             <label>Telefonnummer</label>
             <input
-              id="txtContact"
               name="Kontakt"
               type="tel"
               placeholder="Tel."

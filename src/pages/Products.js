@@ -4,6 +4,7 @@ import ProductsList from '../components/ProductsList';
 import { Colors } from '../styles/Colors';
 import { ProductsData } from '../components/ProductsData';
 import ScrollTop from '../components/ScrollTop';
+import Footer from '../components/Footer';
 
 function Products() {
   const filters = [...new Set(ProductsData.map((item) => item.category))];
@@ -22,13 +23,18 @@ function Products() {
       <ProductsHeader>
         <h2>Unsere Produkte</h2>
         <select onChange={selectionChanged} name="filterBox" id="filterBox">
-          {filters.map((option) => {
-            return <option value={option}>{option}</option>;
+          {filters.map((option, index) => {
+            return (
+              <option key={index} value={option}>
+                {option}
+              </option>
+            );
           })}
         </select>
       </ProductsHeader>
       <ProductsList ProductsData={products} />
       <ScrollTop />
+      <Footer />
     </ProductsSection>
   );
 }

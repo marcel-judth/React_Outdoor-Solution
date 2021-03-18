@@ -1,59 +1,12 @@
+import React from 'react';
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
-import ContactForm from './ContactForm';
+import logo from '../img/logo_outdoor_solution.png';
 
-const ContactSection = () => {
+export default function Footer() {
   return (
-    <ContactSect id="contact">
-      <div className="contact-text">
-        <h2>Kontakt</h2>
-
-        <p className="contactInfoText">
-          Wir sind für Sie da und freuen uns auf Ihren Anruf!
-        </p>
-        <div className="contact-info">
-          <div className="info">
-            <i className="fas fa-phone-alt"></i>
-            <a href="tel:+436607398100">+43 660 739 81 00</a>
-          </div>
-          <div className="info">
-            <i className="fas fa-envelope"></i>
-            <a href="mailto:office@outdoorsolution.at">
-              office@outdoorsolution.at
-            </a>
-          </div>
-          <div className="info">
-            <i className="fas fa-map-marker-alt"></i>
-            <a href="https://goo.gl/maps/ftXdCLQSvUAHjcXeA" target="_blank">
-              Villach, AT
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <ContactForm />
-
-      {/* <FooterSocialMediaIcons>
-        <a href="https://www.google.com">
-          <i className="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.google.com">
-          <i className="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.google.com">
-          <i className="fab fa-youtube"></i>
-        </a>
-
-        <a href="http://www.lgbau.com/index.html">
-          <img src={lgbaulogo} alt="LG Bau logo" />
-        </a>
-      </FooterSocialMediaIcons> */}
-
-      <FooterPrivacy>
-        <a href="/Terms">Impressum</a> <p>&copy; Outdoor Solution 2021</p>
-      </FooterPrivacy>
-
-      <Footer>
+    <div>
+      <CustomFooter>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1369.648830556576!2d13.87505710061962!3d46.64063589313596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47708055371c03cd%3A0x17cd60b5ba54aade!2sMillst%C3%A4tter%20Str.%2052%2C%209523%20Villach!5e0!3m2!1sen!2sat!4v1613837143439!5m2!1sen!2sat"
           loading="lazy"
@@ -73,63 +26,81 @@ const ContactSection = () => {
             <label>Mobil:</label>
             <a href="tel:+436607398446">+43 660 739 84 46</a>
           </div>
-
           <a href="mailto:office@outdoorsolution.at">
             office@outdoorsolution.at
           </a>
         </div>
-      </Footer>
-    </ContactSect>
+
+        <FooterPrivacy>
+          <a href="/Terms">Impressum</a> <p>&copy; Outdoor Solution 2021</p>
+        </FooterPrivacy>
+
+        <LogoFooter>
+          <img src={logo} alt="" />
+        </LogoFooter>
+
+        <FooterSocialMediaIcons>
+          <a
+            className="social-media-footer"
+            href="https://www.facebook.com/outdoorsolution.at"
+          >
+            <i className="fab fa-facebook-f"></i>
+          </a>
+          <a
+            className="social-media-footer"
+            href="https://www.facebook.com/outdoorsolution.at"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a
+            className="social-media-footer"
+            href="https://www.youtube.com/channel/UC1oXd9VKuHJnw-eXBoQpzhQ"
+          >
+            <i className="fab fa-youtube"></i>
+          </a>
+        </FooterSocialMediaIcons>
+      </CustomFooter>
+    </div>
   );
-};
+}
 
-const ContactSect = styled.div`
-  position: relative;
-  height: auto;
-  min-height: 100vh;
-  padding-top: 15vh;
+const FooterSocialMediaIcons = styled.div`
+  color: white;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  padding: 0.5rem 0rem;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  width: 20vw;
 
-  .contactInfoText {
-    margin: 1rem 0rem;
-  }
-
-  .contact-text {
-    height: 100%;
-    min-height: 20rem;
-    padding: 2rem 0rem;
-    margin-left: 5rem;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .info {
-    display: flex;
-    align-items: center;
-    i {
-      font-size: 1.5rem;
-      color: ${Colors.primaryColor};
-      margin: 1rem;
-    }
-    a {
-      color: ${Colors.textColor};
-      &:hover {
-        text-decoration: underline;
-      }
+  i {
+    transition: 0.75s ease;
+    font-size: 2rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.75s ease;
     }
   }
   @media (max-width: 800px) {
-    .contact-text {
-      margin-left: 2.5rem;
-      width: 80%;
-    }
+    display: none;
   }
 `;
 
-const Footer = styled.div`
+const LogoFooter = styled.div`
+  position: absolute;
+  right: 5%;
+  top: 50%;
+
+  transform: translateY(-50%);
+  img {
+    width: 30vw;
+    max-width: 20rem;
+  }
+`;
+
+const CustomFooter = styled.div`
+  position: relative;
   background: ${Colors.footerColor};
   min-height: 40vh;
   max-height: auto;
@@ -212,5 +183,3 @@ const FooterPrivacy = styled.div`
     opacity: 0.5;
   }
 `;
-
-export default ContactSection;

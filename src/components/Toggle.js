@@ -19,14 +19,14 @@ const Toggle = ({
     <motion.div className="question" layout onClick={() => settoggle()}>
       <div className="toggle-title">
         <motion.div layout className="toggle-icon-container">
-          <i class={iconName}></i>
+          <i className={iconName}></i>
         </motion.div>
         <motion.h4 layout>{title}</motion.h4>
         <motion.div layout className="toggle-arrow-container">
           {toggleStates[index] ? (
-            <i class="fas fa-angle-up"></i>
+            <i className="fas fa-angle-up"></i>
           ) : (
-            <i class="fas fa-angle-down"></i>
+            <i className="fas fa-angle-down"></i>
           )}
         </motion.div>
       </div>

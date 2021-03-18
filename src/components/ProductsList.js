@@ -6,7 +6,7 @@ const ProductsList = ({ ProductsData }) => {
   return (
     // <ComingSoon>
     //   <div className="icon-wrapper">
-    //     <i class="far fa-clock"></i>
+    //     <i className="far fa-clock"></i>
     //   </div>
     //   <h1>Coming soon...</h1>
     // </ComingSoon>

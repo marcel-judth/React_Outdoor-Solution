@@ -45,12 +45,26 @@ const OvervieCardsWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   width: auto;
-  overflow-x: auto;
+  overflow-x: scroll;
   margin-bottom: 1rem;
   padding: 1rem 5rem 5rem 5rem;
+
+  ::-webkit-scrollbar {
+    height: 10px; /* At least not zero */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.3
+    ); /* Or any other instruction making the element visible */
+    border-radius: 5px;
+  }
+
   @media (max-width: 1000px) {
     padding: 0.5rem 2rem 2rem 2rem;
-    overflow-x: scroll;
   }
 `;
 

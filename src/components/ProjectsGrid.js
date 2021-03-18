@@ -85,6 +85,7 @@ const Modal = styled.div`
 const ProjectsWrapper = styled.div`
   width: 100%;
   height: auto;
+  margin-bottom: 3rem;
   .modal.open {
     opacity: 1;
     pointer-events: all;
