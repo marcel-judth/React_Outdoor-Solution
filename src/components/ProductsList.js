@@ -52,7 +52,7 @@ const ProductsList = ({ ProductsData }) => {
 const ProductsWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
-  height: 100%;
+  height: auto;
   width: 100%;
   height: 70vh;
   min-height: 35rem;

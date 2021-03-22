@@ -480,7 +480,7 @@ const Card = styled.div`
   background: white;
   min-width: 22rem;
   height: auto;
-  min-height: auto;
+  min-height: 30rem;
   margin-right: 4rem;
   img {
     /* border-radius: 50%; */
