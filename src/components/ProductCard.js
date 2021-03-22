@@ -9,7 +9,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
   const [callOpen, setcallOpen] = useState(false);
   const [date, setDate] = useState(undefined);
   const openModal = () => {
-    // setInfoOpen(!infoOpen);
+    setInfoOpen(!infoOpen);
   };
 
   const openBuy = () => {
@@ -47,9 +47,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
       <img src={image} loading="lazy" alt="product image" />
       <h3>{title}</h3>
       <h4>{price}</h4>
-      <a href={link} target="_blank">
-        mehr Infos
-      </a>
+      <a onClick={openModal}>mehr Infos</a>
       <select>
         {options.map((option, index) => {
           return (
@@ -461,6 +459,8 @@ const ProductDetails = styled.div`
   p {
     text-align: justify;
     margin: 2rem 0rem;
+    max-height: 20vh;
+    overflow-y: auto;
   }
 
   @media (max-height: 600px) {
