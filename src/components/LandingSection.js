@@ -34,8 +34,13 @@ const HomeLanding = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #cccccc;
-  background: url(${landingImage}) no-repeat center center fixed;
+  /* background: url(${landingImage}) no-repeat center center fixed;
+  background-size: cover; */
+
+  background-image: url(${landingImage});
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   /* img {
     width: 100%;
     height: 100%;

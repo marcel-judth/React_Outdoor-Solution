@@ -28,7 +28,7 @@ const PopUp = styled.div`
   position: fixed;
   bottom: 0%;
   left: 0%;
-  min-height: 10vh;
+  min-height: 8vh;
   height: auto;
   background: rgba(0, 0, 0, 0.9);
   z-index: 1;
@@ -38,6 +38,7 @@ const PopUp = styled.div`
   justify-content: center;
   p {
     color: white;
+    font-size: 0.9rem;
     flex: 3 1 30rem;
   }
 
