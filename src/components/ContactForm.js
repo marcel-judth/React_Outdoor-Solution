@@ -29,7 +29,7 @@ export default function ContactForm() {
         method="POST"
       >
         <h3>Schreiben Sie uns</h3>
-        <input type="hidden" name="Typ" value="Neue Reservierung" />
+        <input type="hidden" name="Typ" value="Neue Anfrage" />
         <input
           id="txtName"
           placeholder="Name"

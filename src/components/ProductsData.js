@@ -30,7 +30,8 @@ export const ProductsData = [
     image: profiErde,
     link:
       'https://www.florissa.at/gartenprodukte/professional/profi-erden/profi-erde.html',
-    infoText: 'keine Beschreibung vorhanden?',
+    infoText:
+      'Torferde aus ausgesuchten und sorgfältig verarbeiteten Rohstoffen. Besonders luftige, grobe Struktur, optimale Feuchtigkeit mit Qualität für höchste Ansprüche. Sehr atmungsaktiv und mit Langzeitdünger und Ton angereichert. von Profigärtnern empfohlen.',
   },
   {
     id: 3,
@@ -42,7 +43,7 @@ export const ProductsData = [
     link:
       'https://www.florissa.at/gartenprodukte/natuerlich/erden/pflanzenerde.html',
     infoText:
-      'Der Alleskönner für große Dimensionen.    Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
+      'Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
   },
   {
     id: 4,
@@ -54,7 +55,7 @@ export const ProductsData = [
     link:
       'https://www.florissa.at/gartenprodukte/professional/profi-erden/profi-blumenerde.html',
     infoText:
-      'Der Alleskönner für große Dimensionen.    Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
+      'Torferde aus ausgesuchten und sorgfältig verarbeiteten Rohstoffen. Qualität für höchste Ansprüche. Luftige Struktur mit optimaler Feuchtigkeit is für die ersten 4-6 Wochen vorgedüngt. Für alle Zimmer- und Balkonpflanzen.',
   },
   {
     id: 5,
@@ -66,7 +67,7 @@ export const ProductsData = [
     link:
       'https://www.florissa.at/gartenprodukte/natuerlich/erden/hochbeeterde.html',
     infoText:
-      'Der Alleskönner für große Dimensionen.    Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
+      'Diese hochwertige Torferde eignet sich für Gemüse und Kräuter in Hochbeeten und sonnenexponierten Lagen. Die 100 % natürlichen Rohstoffe wie Schwarz- und Weißtorfe sind die ideale Grundlage für ein kräftiges, gesundes Wachstum und eine reiche Ernte. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Hochbeeterde durch eine hervorragende Wasserspeicherfähigkeit und eine feinkrümelige Struktur für eine schnelle Ausbildung des Wurzelsystems aus.',
   },
   {
     id: 6,
@@ -78,7 +79,7 @@ export const ProductsData = [
     link:
       'https://www.florissa.at/gartenprodukte/natuerlich/erden/rasenerde.html',
     infoText:
-      'Der Alleskönner für große Dimensionen.    Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
+      'Dieses hochwertige, torffreie Spezialsubstrat eignet sich für alle Rasen-Neueinsaaten und -Nachsaaten. Es schützt das Saatgut vor Vogelfraß und Austrocknung und gleicht auch Unebenheiten aus. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für schnelle Keimung und optimale Wurzelbildung. Der enthaltene rein organische Dünger versorgt den Rasen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Rasenerde durch eine feinkrümelige, dauerhaft stabile Struktur aus, die besonders wasser- und luftdurchlässig ist und so Staunässe verhindert.',
   },
   {
     id: 7,
@@ -102,7 +103,7 @@ export const ProductsData = [
     link:
       'https://www.florissa.at/gartenprodukte/natuerlich/pflanzenschutz/schneckenkorn-gruen.html',
     infoText:
-      'Der Alleskönner für große Dimensionen.    Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
+      'Dieses anwendungsfertige Ködergranulat bekämpft zuverlässig Nacktschnecken, schützt so Gemüse, Obst und Zierpflanzen und ist auch bei Regen hervorragend wirksam. Der aus der Natur stammende Wirkstoff (Eisenverbindung) lockt die Schnecken an, nach der Köderaufnahme verkriechen sie sich in ihre Unterschlupfe und verenden dort. Durch diesen speziellen Wirkungsmechanismus sind keine Schneckenkadaver und keine hässlichen Schleimspuren sichtbar. Darüber hinaus ist das Schneckenkorn GRÜN besonders einfach wie sicher in der Anwendung und schont Haustiere, Igel, Bienen und andere Nützlinge.',
   },
   {
     id: 9,
@@ -114,6 +115,6 @@ export const ProductsData = [
     link:
       'https://www.florissa.at/gartenprodukte/problemloeser/gegen-schnecken/schnecke-x-wetterfest-nachfuellset.html',
     infoText:
-      'Der Alleskönner für große Dimensionen.    Dieses hochwertige, torffreie Kultursubstrat eignet sich für das Ein- und Umpflanzen von mehrjährigen Freiland-Pflanzen. Die 100 % natürlichen Rohstoffe sind die ideale Grundlage für gesundes Wachstum, optimale Wurzelbildung und sicheres Anwachsen. Der enthaltene rein organische Dünger versorgt die Pflanzen in den ersten 4 - 6 Wochen mit allen wichtigen Hauptnährstoffen. Darüber hinaus zeichnet sich die Pflanzerde durch eine lockere, stabile Struktur, ein hohes Aufnahmevermögen für Nährstoffe sowie ein hohes Absorptionsvermögen für Wärmestrahlen aus.Nachhaltig gärtnern ohne Torf Handelsübliche Erde besteht zu einem großen Teil aus Torf und ist daher mitverantwortlich für die Zerstörung unserer natürlichen Moorlandschaften. Damit geht nicht nur der Lebensraum für viele Tiere und Pflanzen verloren, auch das Klima wird geschädigt. Genügend Gründe auf umweltfreundliche, torffreie Alternativen zu setzen. Ausgesuchte und sorgfältig verarbeitete Rohstoffe wie Holzfasern, feine Kokosfasern und Rindenhumus ergeben eine torffreie Pflanzerde in höchster Qualität.',
+      'Lockstoff für die Verwendung mit der Schneckenfalle SchneckeX. Diese schützt Ihren Garten einfach, schnell und wirkungsvoll vor Schnecken. Der Lockstoff zieht die gefräßigen Plagegeister an und hält sie zuverlässig von Salat, Gemüse und Zierpflanzen fern.',
   },
 ];

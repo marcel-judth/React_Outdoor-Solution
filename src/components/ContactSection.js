@@ -1,3 +1,4 @@
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 import ContactForm from './ContactForm';
@@ -50,7 +51,7 @@ const ContactSection = () => {
       </FooterSocialMediaIcons> */}
 
       <FooterPrivacy>
-        <a href="/Terms">Impressum</a> <p>&copy; Outdoor Solution 2021</p>
+        <Link to="/Terms">Impressum</Link> <p>&copy; Outdoor Solution 2021</p>
       </FooterPrivacy>
 
       <Footer>
@@ -64,7 +65,7 @@ const ContactSection = () => {
           <p>Millstätter Straße 52</p>
           <p>9523 Villach, AT</p>
           <br />
-          <p>Mo-Fr 08:00-17:00</p>
+          <p>Mo-Fr 09:00-17:00</p>
           <div className="footer-contact">
             <label>Büro:</label>
             <a href="tel:+436607398100">+43 660 739 81 00</a>

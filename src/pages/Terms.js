@@ -56,7 +56,7 @@ const TermsSection = styled.div`
     line-height: 2rem;
   }
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 400;
   }
   span {
