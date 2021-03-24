@@ -14,6 +14,10 @@ export default function ContactForm() {
       if (xhr.readyState !== XMLHttpRequest.DONE) return;
       if (xhr.status === 200) {
         form.reset();
+        const button = document.querySelector('.btn-contact');
+        button.disabled = true;
+        button.innerText = 'Vielen Dank!';
+        button.classList.add('btn-sent');
         console.log('SUCCESS');
       } else {
         console.log('ERROR', xhr);
@@ -67,7 +71,9 @@ export default function ContactForm() {
             e.key === 'Enter' && e.preventDefault();
           }}
         />
-        <button type="submit">Senden</button>
+        <button className="btn-contact" type="submit">
+          Senden
+        </button>
       </form>
     </ContactContainer>
   );
@@ -117,6 +123,19 @@ const ContactContainer = styled.div`
       transition: 1s ease;
       &:hover {
         transform: scale(1.1);
+        transition: 1s ease;
+      }
+    }
+
+    .btn-sent {
+      border: none;
+      border: 0.1rem solid grey;
+      background: unset;
+      color: grey;
+      background: unset;
+
+      &:hover {
+        transform: scale(1);
         transition: 1s ease;
       }
     }
