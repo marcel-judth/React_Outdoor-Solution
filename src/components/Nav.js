@@ -1,15 +1,15 @@
 //styles
-import styled from 'styled-components';
-import { Colors } from '../styles/Colors';
+import styled from "styled-components";
+import { Colors } from "../styles/Colors";
 //images
-import logoImg from '../img/logo_outdoor_solution.png';
+import logoImg from "../img/logo_outdoor_solution.png";
 //router
-import { useLocation } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { useLocation } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 //animation
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Nav = () => {
   const location = useLocation();
@@ -22,7 +22,7 @@ const Nav = () => {
       </Link>
 
       <Burger
-        className={`burger ${navStatus ? 'toggle' : ''}`}
+        className={`burger ${navStatus ? "toggle" : ""}`}
         onClick={() => setNavStatus(!navStatus)}
       >
         <span className="line1"></span>
@@ -30,22 +30,22 @@ const Nav = () => {
         <span className="line3"></span>
       </Burger>
 
-      <ul className={`${navStatus ? 'active' : ''}`}>
+      <ul className={`${navStatus ? "active" : ""}`}>
         <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/">Home</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
-            animate={{ width: location.pathname === '/' ? '100%' : '0%' }}
+            initial={{ width: "0%" }}
+            animate={{ width: location.pathname === "/" ? "100%" : "0%" }}
           />
         </li>
         <li onClick={() => setNavStatus(!navStatus)}>
           <Link to="/aboutus">Über uns</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
+            initial={{ width: "0%" }}
             animate={{
-              width: location.pathname === '/aboutus' ? '100%' : '0%',
+              width: location.pathname === "/aboutus" ? "100%" : "0%",
             }}
           />
         </li>
@@ -53,9 +53,9 @@ const Nav = () => {
           <Link to="/products">Produkte</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
+            initial={{ width: "0%" }}
             animate={{
-              width: location.pathname === '/products' ? '100%' : '0%',
+              width: location.pathname === "/products" ? "100%" : "0%",
             }}
           />
         </li>
@@ -63,9 +63,9 @@ const Nav = () => {
           <Link to="/projects">Projekte</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
+            initial={{ width: "0%" }}
             animate={{
-              width: location.pathname === '/projects' ? '100%' : '0%',
+              width: location.pathname === "/projects" ? "100%" : "0%",
             }}
           />
         </li>
@@ -73,9 +73,9 @@ const Nav = () => {
           <Link to="/#contact">Kontakt</Link>
           <Line
             transition={{ duration: 0.75 }}
-            initial={{ width: '0%' }}
+            initial={{ width: "0%" }}
             animate={{
-              width: location.pathname === '#contact' ? '100%' : '0%',
+              width: location.pathname === "#contact" ? "100%" : "0%",
             }}
           />
         </li>

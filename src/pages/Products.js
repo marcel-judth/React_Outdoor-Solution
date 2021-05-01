@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import ProductsList from "../components/ProductsList";
 import { Colors } from "../styles/Colors";
 import { ProductsData } from "../components/ProductsData";
 import ScrollTop from "../components/ScrollTop";
@@ -8,6 +7,7 @@ import Footer from "../components/Footer";
 import ShopifyProducts from "../components/ShopifyProducts";
 
 function Products() {
+  window.location.href = "/products.html";
   const filters = [...new Set(ProductsData.map((item) => item.category))];
   filters.unshift("Alle");
   const [products, setproducts] = useState(ProductsData);
