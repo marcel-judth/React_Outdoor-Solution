@@ -5,7 +5,7 @@ import { Colors } from "../styles/Colors";
 import { ProductsData } from "../components/ProductsData";
 import ScrollTop from "../components/ScrollTop";
 import Footer from "../components/Footer";
-import { loadProducts } from "../components/ShopifyProducts";
+import ShopifyProducts from "../components/ShopifyProducts";
 
 function Products() {
   const filters = [...new Set(ProductsData.map((item) => item.category))];
@@ -18,9 +18,6 @@ function Products() {
     if (e.target.value === "Alle") setproducts(ProductsData);
     else setproducts(ProductsData.filter((p) => p.category === e.target.value));
   };
-
-  useEffect(() => loadProducts(), []);
-
   return (
     <ProductsSection>
       <ProductsHeader>
@@ -36,7 +33,7 @@ function Products() {
         </select>
       </ProductsHeader>
       {/* <ProductsList ProductsData={products} /> */}
-      <div id="collection-component-1619721276677"></div>
+      <ShopifyProducts />
       <ScrollTop />
       <Footer />
     </ProductsSection>
