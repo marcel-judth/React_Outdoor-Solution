@@ -1433,7 +1433,7 @@
             <span class="line1"></span><span class="line2"></span
             ><span class="line3"></span>
           </div>
-          <ul class="">
+          <ul class="navlist">
             <li>
               <a href="/#/">Home</a>
               <div class="sc-dlfnbm iqMcPb" style="width: 0%"></div>
@@ -1456,7 +1456,21 @@
             </li>
           </ul>
         </nav>
-        <
+
+        <script>
+          const navOpenCallback = () => {
+            document.querySelector(".navlist").classList.toggle("active");
+            document.querySelector(".burger").classList.toggle("toggle");
+          };
+
+          document
+            .querySelector(".burger")
+            .addEventListener("click", navOpenCallback);
+          document
+            .querySelector("li")
+            .addEventListener("click", navOpenCallback);
+        </script>
+
         <div class="sc-iktFzd kRBSvR">
           <div class="sc-jJEJSO BpeXm">
             <h2>Unsere Produkte</h2>
@@ -1693,7 +1707,7 @@
                 >
               </div>
               <div class="sc-bkzZxe fbOFzx">
-                <a href="/Terms">Impressum</a>
+                <a href="/#/Terms">Rechtliches</a>
                 <p>© Outdoor Solution 2021</p>
               </div>
               <div class="sc-fodVxV gZooUp">
