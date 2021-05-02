@@ -10,49 +10,61 @@ import Impressum from "./Impressum";
 import DSGVO from "./DSGVO";
 import AGBS from "./AGBS";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Terms() {
   const [lineElement, lineControls] = useScroll(0.1);
 
   return (
-    <TermsSection>
-      <h1>Rechtliches</h1>
-      <motion.div
-        className="line"
-        initial="hidden"
-        animate="show"
-        variants={lineAnimAboutUs}
-      ></motion.div>
-      <TermsNav>
-        <Link to="/terms/impressum">
-          <button>Impressum</button>
-        </Link>
-        <Link to="/terms/dsgvo">
-          <button>DSGVO</button>
-        </Link>
-        <Link to="/terms/agbs">
-          <button>AGBs</button>
-        </Link>
-      </TermsNav>
-      <Switch>
-        <Route path="/terms/impressum" exact>
-          <Impressum />
-        </Route>
-        <Route path="/terms/dsgvo" exact>
-          <DSGVO />
-        </Route>
-        <Route path="/terms/agbs" exact>
-          <AGBS />
-        </Route>
-      </Switch>
+    <TermWrapper>
+      <TermsSection>
+        <h1>Rechtliches</h1>
+        <motion.div
+          className="line"
+          initial="hidden"
+          animate="show"
+          variants={lineAnimAboutUs}
+        ></motion.div>
+        <TermsNav>
+          <Link to="/terms/impressum">
+            <button>Impressum</button>
+          </Link>
+          <Link to="/terms/dsgvo">
+            <button>DSGVO</button>
+          </Link>
+          {/* <Link to="/terms/agbs">
+            <button>AGBs</button>
+          </Link> */}
+        </TermsNav>
+        <Switch>
+          <Route path="/terms/impressum" exact>
+            <Impressum />
+          </Route>
+          <Route path="/terms/dsgvo" exact>
+            <DSGVO />
+          </Route>
+          <Route path="/terms/agbs" exact>
+            <AGBS />
+          </Route>
+        </Switch>
+      </TermsSection>
       <ScrollTop />
-    </TermsSection>
+      <Footer />
+    </TermWrapper>
   );
 }
+
+const TermWrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
 
 const TermsSection = styled.div`
   padding-top: 15vh;
   padding-left: 5rem;
+  margin-bottom: 3rem;
   .line {
     height: 0.2rem;
     background: ${Colors.primaryColor};

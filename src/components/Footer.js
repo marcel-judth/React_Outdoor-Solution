@@ -104,6 +104,7 @@ const LogoFooter = styled.div`
 const CustomFooter = styled.div`
   position: relative;
   background: ${Colors.footerColor};
+  width: 100%;
   min-height: 40vh;
   max-height: auto;
   max-width: 100vw;
