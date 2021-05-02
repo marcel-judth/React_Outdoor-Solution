@@ -1,7 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Colors } from '../styles/Colors';
-import logo from '../img/logo_outdoor_solution.png';
+import React from "react";
+import styled from "styled-components";
+import { Colors } from "../styles/Colors";
+import logo from "../img/logo_outdoor_solution.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -17,7 +18,7 @@ export default function Footer() {
           <p>Millstätter Straße 52</p>
           <p>9523 Villach, AT</p>
           <br />
-          <p>Mo-Fr 08:00-17:00</p>
+          <p>Mo-Fr 09:00-17:00</p>
           <div className="footer-contact">
             <label>Büro:</label>
             <a href="tel:+436607398100">+43 660 739 81 00</a>
@@ -32,7 +33,8 @@ export default function Footer() {
         </div>
 
         <FooterPrivacy>
-          <a href="/Terms">Impressum</a> <p>&copy; Outdoor Solution 2021</p>
+          <Link to="/Terms">Rechtliches</Link>
+          <p>&copy; Outdoor Solution {new Date().getFullYear()}</p>
         </FooterPrivacy>
 
         <LogoFooter>

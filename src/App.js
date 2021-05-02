@@ -1,22 +1,21 @@
 //components and pages
-import Nav from './components/Nav';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import CookiePopUp from './components/CookiePopUp';
+import Nav from "./components/Nav";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import CookiePopUp from "./components/CookiePopUp";
 
 //styles
-import GlobalStyles from './styles/GlobalStyles';
+import GlobalStyles from "./styles/GlobalStyles";
 
 //Router
-import { Switch, Route, useLocation } from 'react-router-dom';
-import AboutUs from './pages/AboutUs';
-import Products from './pages/Products';
-import Terms from './pages/Terms';
-import { AnimatePresence } from 'framer-motion';
+import { Switch, Route, useLocation } from "react-router-dom";
+import AboutUs from "./pages/AboutUs";
+import Products from "./pages/Products";
+import Terms from "./pages/Terms";
 
 function App() {
   const location = useLocation();
-  const displayConsent = !sessionStorage.getItem('jdc_consent');
+  const displayConsent = !sessionStorage.getItem("jdc_consent");
 
   return (
     <div className="App">

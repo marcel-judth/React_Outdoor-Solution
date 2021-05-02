@@ -1,10 +1,15 @@
-import React from 'react';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
-import { lineAnimAboutUs } from '../Animation';
-import { useScroll } from '../components/useScroll';
-import { Colors } from '../styles/Colors';
-import ScrollTop from '../components/ScrollTop';
+import React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import { lineAnimAboutUs } from "../Animation";
+import { useScroll } from "../components/useScroll";
+import { Colors } from "../styles/Colors";
+import ScrollTop from "../components/ScrollTop";
+import { Route, Switch } from "react-router";
+import Impressum from "./Impressum";
+import DSGVO from "./DSGVO";
+import AGBS from "./AGBS";
+import { Link } from "react-router-dom";
 
 function Terms() {
   const [lineElement, lineControls] = useScroll(0.1);
@@ -18,25 +23,28 @@ function Terms() {
         animate="show"
         variants={lineAnimAboutUs}
       ></motion.div>
-      <h2>Impressum</h2>
-      <p>Outdoor Solution</p>
-      <p>Daniel Tino Wedam</p>
-      <p>Millstätter Straße 52</p>
-      <p>9532 Villach, AT</p>
-      <br />
-      <p>
-        <span>Unternehmensgegenstand: </span>Landschaftsgärnterei
-      </p>
-      <p>
-        <span>UID-Nummer: </span>ATU71987503
-      </p>
-      <br />
-      <p>
-        <span>E-Mail: </span>office@outdoorsolution.at
-      </p>
-      <p>
-        <span>Tel: </span>0660 739 81 00
-      </p>
+      <TermsNav>
+        <Link to="/terms/impressum">
+          <button>Impressum</button>
+        </Link>
+        <Link to="/terms/dsgvo">
+          <button>DSGVO</button>
+        </Link>
+        <Link to="/terms/agbs">
+          <button>AGBs</button>
+        </Link>
+      </TermsNav>
+      <Switch>
+        <Route path="/terms/impressum" exact>
+          <Impressum />
+        </Route>
+        <Route path="/terms/dsgvo" exact>
+          <DSGVO />
+        </Route>
+        <Route path="/terms/agbs" exact>
+          <AGBS />
+        </Route>
+      </Switch>
       <ScrollTop />
     </TermsSection>
   );
@@ -59,9 +67,37 @@ const TermsSection = styled.div`
     font-size: 2rem;
     font-weight: 400;
   }
+  h2 {
+    word-wrap: break-word;
+  }
   span {
     font-weight: bold;
   }
+
+  button {
+    border: none;
+    background: ${Colors.primaryColor};
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+    width: auto;
+    color: white;
+    cursor: pointer;
+    transition: 1s ease;
+    margin: 1rem 1rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: 1s ease;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    padding-left: 2rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
 `;
+
+const TermsNav = styled.div``;
 
 export default Terms;
