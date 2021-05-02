@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import { Hide } from '../styles/Styles';
-import landingImage from '../img/home_landing_image.jpg';
-import logoImage from '../img/logo_outdoor_solution.png';
-import { motion } from 'framer-motion';
+import styled from "styled-components";
+import { Hide } from "../styles/Styles";
+import landingImage from "../img/home_landing_image.jpg";
+import logoImage from "../img/logo_outdoor_solution.png";
+import { motion } from "framer-motion";
 
 const LandingSection = () => {
   return (
     <HomeLanding>
       <HomeLandingText
-        transition={{ duration: 1.5, delay: 2 }}
-        initial={{ transform: 'translateX(100%)', opacity: 0 }}
-        animate={{ transform: 'translateX(0%)', opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.75 }}
+        initial={{ transform: "translateX(100%)", opacity: 0 }}
+        animate={{ transform: "translateX(0%)", opacity: 1 }}
       >
         <Hide>
           <img src={logoImage} loading="lazy" alt="logo Outdoor Solution" />

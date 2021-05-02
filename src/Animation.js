@@ -6,7 +6,7 @@ export const titleAnim = {
   hidden: { y: -200 },
   show: {
     y: 0,
-    transition: { delay: 1, duration: 0.75, ease: "easeOut" },
+    transition: { delay: 2, duration: 0.75, ease: "easeOut" },
   },
 };
 
