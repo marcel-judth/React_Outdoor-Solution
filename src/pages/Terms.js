@@ -1,16 +1,16 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { lineAnimAboutUs } from "../Animation";
-import { useScroll } from "../components/useScroll";
-import { Colors } from "../styles/Colors";
-import ScrollTop from "../components/ScrollTop";
-import { Route, Switch } from "react-router";
-import Impressum from "./Impressum";
-import DSGVO from "./DSGVO";
-import AGBS from "./AGBS";
-import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { lineAnimAboutUs } from '../Animation';
+import { useScroll } from '../components/useScroll';
+import { Colors } from '../styles/Colors';
+import ScrollTop from '../components/ScrollTop';
+import { Route, Switch } from 'react-router';
+import Impressum from './Impressum';
+import DSGVO from './DSGVO';
+import AGBS from './AGBS';
+import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 function Terms() {
   const [lineElement, lineControls] = useScroll(0.1);
@@ -30,7 +30,7 @@ function Terms() {
             <button>Impressum</button>
           </Link>
           <Link to="/terms/dsgvo">
-            <button>DSGVO</button>
+            <button>Datenschutzverordnung</button>
           </Link>
           {/* <Link to="/terms/agbs">
             <button>AGBs</button>

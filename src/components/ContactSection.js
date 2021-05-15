@@ -1,7 +1,7 @@
-import { HashLink as Link } from "react-router-hash-link";
-import styled from "styled-components";
-import { Colors } from "../styles/Colors";
-import ContactForm from "./ContactForm";
+import { HashLink as Link } from 'react-router-hash-link';
+import styled from 'styled-components';
+import { Colors } from '../styles/Colors';
+import ContactForm from './ContactForm';
 
 const ContactSection = () => {
   return (
@@ -51,7 +51,7 @@ const ContactSection = () => {
       </FooterSocialMediaIcons> */}
 
       <FooterPrivacy>
-        <Link to="/Terms">Rechtliches</Link>
+        <Link to="/Terms">Rechtliches & AGBs</Link>
         <p>&copy; Outdoor Solution {new Date().getFullYear()}</p>
       </FooterPrivacy>
 

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Colors } from "../styles/Colors";
-import logo from "../img/logo_outdoor_solution.png";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Colors } from '../styles/Colors';
+import logo from '../img/logo_outdoor_solution.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
 
         <FooterPrivacy>
-          <Link to="/Terms">Rechtliches</Link>
+          <Link to="/Terms">Rechtliches & AGBs</Link>
           <p>&copy; Outdoor Solution {new Date().getFullYear()}</p>
         </FooterPrivacy>
 
