@@ -207,11 +207,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
 
       <CallModal className={'call-modal ' + (callOpen ? 'active' : '')}>
         <h3>Rückruf anfordern</h3>
-        <form
-          onSubmit={submitForm}
-          action="https://formspree.io/f/mzbklnpk"
-          method="POST"
-        >
+        <form action="https://formspree.io/f/mzbklnpk" method="POST">
           <input type="hidden" name="Typ" value="Rueckruf" />
           <div className="input-wrapper">
             <label>Telefonnummer</label>
