@@ -29,7 +29,7 @@ export default function ContactForm() {
     <ContactContainer>
       <form
         onSubmit={submitForm}
-        action="https://formspree.io/f/mzbklnpk"
+        action="https://formspree.io/f/xnqldaba"
         method="POST"
       >
         <h3>Schreiben Sie uns</h3>

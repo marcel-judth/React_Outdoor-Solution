@@ -126,6 +126,32 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
               required
             />
           </div>
+          <div className="input-wrapper">
+            <label>Straße</label>
+
+            <input
+              placeholder="Straße"
+              type="text"
+              name="Strasse"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label>PLZ + Ort</label>
+
+            <input
+              placeholder="Straße"
+              type="text"
+              name="Ort"
+              onKeyPress={(e) => {
+                e.key === 'Enter' && e.preventDefault();
+              }}
+              required
+            />
+          </div>
           <input type="hidden" name="Ware" value={title} />
           <input type="hidden" name="Preis" value={price} />
           <div className="input-wrapper">
@@ -184,13 +210,17 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
                 <option value="11:00">11:00</option>
                 <option value="11:30">11:30</option>
                 <option value="12:00">12:00</option>
+                <option value="12:00">12:30</option>
+                <option value="12:00">13:00</option>
+                <option value="17:00">16:00</option>
+                <option value="17:00">16:30</option>
                 <option value="17:00">17:00</option>
                 <option value="17:30">17:30</option>
                 <option value="18:00">18:00</option>
               </select>
             </div>
           </div>
-          <button className="buy-btn" type="submit">
+          <button className="buy-btn btn-margin" type="submit">
             Bestellen
           </button>
         </form>
@@ -207,7 +237,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
 
       <CallModal className={'call-modal ' + (callOpen ? 'active' : '')}>
         <h3>Rückruf anfordern</h3>
-        <form action="https://formspree.io/f/mzbklnpk" method="POST">
+        <form action="https://formspree.io/f/xnqldaba" method="POST">
           <input type="hidden" name="Typ" value="Rueckruf" />
           <div className="input-wrapper">
             <label>Telefonnummer</label>
@@ -239,7 +269,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
         className={'thankYou-modal ' + (thankYouOpen ? 'active' : '')}
       >
         <h3>Vielen Dank für Ihre Reservierung</h3>
-        <p>In ein paar Minuten bekommen sie eine Bestätigungs-Mail.</p>
+        <p>In ein paar Minuten bekommen sie eine Bestätigungsmail.</p>
         <button
           type="button"
           type="button"
@@ -269,8 +299,8 @@ const BuyProduct = styled.div`
   transform: translate(-50%, 0%);
   width: 90%;
   max-width: 30rem;
-  height: 80%;
-  min-height: 40rem;
+  height: auto;
+  min-height: 45rem;
   max-height: 40rem;
   background: white;
   display: flex;
@@ -302,6 +332,7 @@ const BuyProduct = styled.div`
     label {
       font-size: 0.8rem;
       margin-bottom: 0.2rem;
+      margin-top: 0.5rem;
     }
     input {
       border: none;
@@ -339,6 +370,9 @@ const BuyProduct = styled.div`
       transform: scale(1.1);
       transition: 0.5s ease;
     }
+  }
+  .btn-margin {
+    margin: 0.5rem 0rem;
   }
   .buy-close-btn {
     border: 0.2rem solid #7e4a4a;
@@ -438,6 +472,7 @@ const CallModal = styled.div`
       font-family: 'Montserrat', sans-serif;
     }
   }
+
   @media (max-width: 600px) {
     width: 100%;
     padding: 2rem 1rem;
@@ -599,9 +634,9 @@ const Card = styled.div`
     text-align: center;
     font-size: 1.5rem;
   }
-  h4 {
+  /* h4 {
     font-size: 1.7rem;
-  }
+  } */
   a {
     text-decoration: underline;
     opacity: 0.7;
