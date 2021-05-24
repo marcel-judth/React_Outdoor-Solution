@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-import { Colors } from './Colors';
+import { createGlobalStyle } from "styled-components";
+import { Colors } from "./Colors";
 
 const GlobalStyles = createGlobalStyle`
 *{
@@ -31,12 +31,21 @@ h3{
 button{
     font-family: 'Montserrat', sans-serif;
 }
-@media (max-width: 1000px){
+@media (max-width: 1300px){
     p{
         font-size: 1rem;
     }
     a{
         font-size: 1rem;
+    }
+    h2{
+       font-size: 2rem;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h4{
+        font-size: 1.2rem;
     }
 }
 `;
