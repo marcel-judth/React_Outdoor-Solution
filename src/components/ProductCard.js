@@ -55,7 +55,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
     <Card>
       <img src={image} loading="lazy" alt="product image" />
       <h3>{title}</h3>
-      <h4>{price}</h4>
+      <h4 className="price">{price}</h4>
       <a onClick={openModal}>mehr Infos</a>
       <select>
         {options.map((option, index) => {
@@ -346,6 +346,9 @@ const BuyProduct = styled.div`
       font-size: 1rem;
     }
   }
+  .price {
+    font-size: 1.9rem;
+  }
   .react-datepicker-wrapper {
     input {
       width: 90%;
@@ -633,6 +636,9 @@ const Card = styled.div`
   h3 {
     text-align: center;
     font-size: 1.5rem;
+  }
+  .price {
+    font-size: 1.2rem !important;
   }
   /* h4 {
     font-size: 1.7rem;
