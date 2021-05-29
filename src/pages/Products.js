@@ -35,8 +35,9 @@ function Products() {
       </ProductsHeader>
       <p className="products-text">
         Ab sofort können Sie hier unsere Produkte reservieren und anschließend
-        in unserem Büro abholen. (Abholbereit in 2 Tagen, Bezahlung: Bar oder
-        auf Rechnung)
+        in unserem Büro abholen. Gerne auch unter der Nummer{' '}
+        <a href="tel:+436607398100">+43 660 73 98 100</a>. (Abholbereit in 2
+        Tagen, Bezahlung: Bar oder auf Rechnung)
       </p>
       <ProductsList ProductsData={products} />
       <ScrollTop />
@@ -57,6 +58,12 @@ const ProductsSection = styled.div`
   }
   .products-text {
     margin-left: 5rem;
+    margin-right: 5rem;
+
+    a {
+      font-size: 1.2rem;
+      color: ${Colors.primaryColor};
+    }
   }
   @media (max-width: 700px) {
     .products-text {
@@ -64,6 +71,9 @@ const ProductsSection = styled.div`
       margin-right: 2.5rem;
       text-align: justify;
       font-size: 0.8rem;
+      a {
+        font-size: 0.8rem;
+      }
     }
   }
 `;

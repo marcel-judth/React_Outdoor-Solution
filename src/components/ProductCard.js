@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import { Colors } from '../styles/Colors';
 import CustomDatePicker from './CustomDatePicker';
 import emailjs from 'emailjs-com';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ image, title, price, infoText, options, link }) => {
   const [infoOpen, setInfoOpen] = useState(false);
   const [buyOpen, setbuyOpen] = useState(false);
   const [callOpen, setcallOpen] = useState(false);
   const [thankYouOpen, setthankYouOpen] = useState(false);
+  const [privacyChecked, setPrivacyChecked] = useState(false);
 
   const [date, setDate] = useState(undefined);
   const openModal = () => {
@@ -56,6 +58,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
       <img src={image} loading="lazy" alt="product image" />
       <h3>{title}</h3>
       <h4 className="price">{price}</h4>
+      <span>inkl. UST</span>
       <a onClick={openModal}>mehr Infos</a>
       <select>
         {options.map((option, index) => {
@@ -67,7 +70,7 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
         })}
       </select>
       <button onClick={openBuy} className="buy-btn">
-        Bestellen
+        Reservieren
       </button>
 
       <ProductDetails className={'details-modal ' + (infoOpen ? 'active' : '')}>
@@ -220,8 +223,22 @@ const ProductCard = ({ image, title, price, infoText, options, link }) => {
               </select>
             </div>
           </div>
-          <button className="buy-btn btn-margin" type="submit">
-            Bestellen
+
+          <label id="lblCheckboxPrivacy" for="checkboxPrivacy">
+            <input
+              type="checkbox"
+              id="checkboxPrivacy"
+              onClick={() => setPrivacyChecked(!privacyChecked)}
+            />
+            Ich akzeptiere alle
+            <Link to="/terms"> Rechtlichen Bedingungen</Link>.
+          </label>
+          <button
+            className="buy-btn btn-margin "
+            type="submit"
+            disabled={!privacyChecked}
+          >
+            Reservieren
           </button>
         </form>
 
@@ -300,7 +317,7 @@ const BuyProduct = styled.div`
   width: 90%;
   max-width: 30rem;
   height: auto;
-  min-height: 45rem;
+  min-height: 50rem;
   max-height: 40rem;
   background: white;
   display: flex;
@@ -374,6 +391,20 @@ const BuyProduct = styled.div`
       transition: 0.5s ease;
     }
   }
+
+  #lblCheckboxPrivacy {
+    margin: 1rem 0rem;
+    vertical-align: middle;
+
+    input {
+      margin-right: 1rem;
+    }
+
+    a {
+      font-size: 0.8rem;
+    }
+  }
+
   .btn-margin {
     margin: 0.5rem 0rem;
   }
@@ -387,9 +418,9 @@ const BuyProduct = styled.div`
     color: ${Colors.primaryColor};
   }
   @media (max-width: 600px) {
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 20%);
     width: 100%;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     form {
       width: 90%;
     }
@@ -401,6 +432,8 @@ const BuyProduct = styled.div`
       button {
         margin-bottom: 0.5rem;
         width: 100%;
+        font-size: 0.8rem;
+        padding: 0.5rem 1.8rem;
       }
     }
   }
@@ -626,7 +659,7 @@ const Card = styled.div`
   background: white;
   min-width: 22rem;
   height: auto;
-  min-height: 30rem;
+  min-height: 35rem;
   margin-right: 4rem;
   img {
     /* border-radius: 50%; */
@@ -666,6 +699,15 @@ const Card = styled.div`
       transition: 0.5s ease;
     }
   }
+  .buy-btn:disabled {
+    border: none;
+    border: 0.1rem solid grey;
+    background: unset;
+    color: grey;
+    padding: 0.5rem 3rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
   .disabled-btn {
     border: none;
     border: 0.1rem solid grey;
@@ -684,7 +726,10 @@ const Card = styled.div`
     padding: 0.5rem 2rem;
     font-size: 1rem;
   }
+
   @media (max-width: 1000px) {
+    min-height: 30rem;
+
     h4 {
       font-size: 1rem;
     }
@@ -692,7 +737,8 @@ const Card = styled.div`
       font-size: 1.2rem;
     }
     img {
-      height: 15vh;
+      min-height: auto;
+      height: 10rem;
     }
     a {
       font-size: 0.8rem;
@@ -703,6 +749,20 @@ const Card = styled.div`
     button {
       padding: 0.5rem 2rem;
       font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    min-width: 17rem;
+    min-height: 10rem;
+    margin-right: 2rem;
+    img {
+      width: auto;
+    }
+
+    .buy-btn {
+      font-size: 0.8rem;
+      padding: 0.7rem 1.8rem;
     }
   }
 `;

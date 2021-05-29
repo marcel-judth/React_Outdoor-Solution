@@ -11,6 +11,7 @@ import DSGVO from './DSGVO';
 import AGBS from './AGBS';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import Info from './Info';
 
 function Terms() {
   const [lineElement, lineControls] = useScroll(0.1);
@@ -32,6 +33,9 @@ function Terms() {
           <Link to="/terms/dsgvo">
             <button>Datenschutzverordnung</button>
           </Link>
+          <Link to="/terms/info">
+            <button>Informationspflicht</button>
+          </Link>
           {/* <Link to="/terms/agbs">
             <button>AGBs</button>
           </Link> */}
@@ -45,6 +49,9 @@ function Terms() {
           </Route>
           <Route path="/terms/agbs" exact>
             <AGBS />
+          </Route>
+          <Route path="/terms/info" exact>
+            <Info />
           </Route>
         </Switch>
       </TermsSection>
